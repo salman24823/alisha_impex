@@ -1,0 +1,327 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+@media only screen and (max-width : 770px){
+
+  .sections {
+    @apply !py-16   
+  }
+}
+
+/*///////////////////////// VARIABLES /////////////////////////////*/
+
+:root{
+    --red-color:#EA4D44;
+    --bg-color:#111827;
+    --heading-color:rgb(61, 61, 61);
+    --btn-color:#32673B;
+}
+
+.main_heading{
+  color: var(--heading-color);
+  @apply leading-tight font-bold text-6xl 
+}
+.sub_heading{
+  color: var(--heading-color);
+  @apply text-5xl max-[770px]:text-3xl leading-tight font-bold
+}
+.text_color{
+  color: var(--heading-color);
+}
+.para{
+  color: rgb(100, 96, 96);
+}
+.background{
+  background: #A8C5BA;
+}
+.green{
+  color: var(--btn-color);
+}
+.greenback{
+  background-color: var(--btn-color);
+}
+/*///////////////////// WEB BUTTON /////////////////////////*/
+
+.web_btn{
+  border: 1px solid var(--btn-color);
+  @apply bg-transparent 
+  px-8 py-2 
+  rounded-md  
+  border-2 
+  text-white  
+  font-bold 
+  text-[16px] 
+  relative 
+  overflow-hidden
+}
+.web_btn::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0; 
+  width: 100%;
+  height: 0%;
+  background: var(--btn-color)  ;
+  transition: all .5s;
+  border-radius: 50% 50% 0 0;
+  overflow: hidden;
+}
+.web_btn:hover::before {
+  height: 180%;
+}
+.web_btn span{
+  transition: all 0.5s;
+  color: var(--btn-color);
+  z-index: 10;
+  position: relative;
+
+}
+.web_btn:hover span{
+  color: #FFFFFF;
+}
+
+.nav_bg{
+  background-color: rgba(255, 255, 255, 0.226);
+  backdrop-filter: blur(200px);
+}
+
+.bds{
+   /* background-color: rgba(128, 128, 128, 0.342); */
+}
+
+.sin{
+    -webkit-text-stroke: 1px var(--btn-color); 
+}
+.card_back{
+  background: #32673bcc;
+
+}
+.card_btn{
+  transition: all .5s;
+}
+.service_card{
+  cursor: pointer;
+}
+
+/* ///////////// nav animations //////////// */
+
+
+.fade_center {
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+  text-decoration: none;
+  color: inherit; /* Default color */
+  transition: all .2s;
+}
+
+.fade_center::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 0.1em;
+  background-color: var(--btn-color, #007bff); /* Default color */
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: opacity 500ms, transform 500ms, width 500ms;
+}
+
+/* Active link: Apply green color */
+.fade_center.active {
+  color: var(--btn-color); /* Active link color */
+}
+
+/* When the link is hovered, show animation */
+.fade_center.active:hover {
+  color: var(--btn-color); /* Keep var(--btn-color) color on hover */
+}
+
+/* Hover effect for non-active links */
+.fade_center:hover {
+  color: var(--btn-color); /* var(--btn-color) on hover */
+}
+
+/* Active link animation */
+.fade_center.active::after {
+  opacity: 1;
+  width: 100%;
+  transform: scaleX(1);
+}
+
+.navi:hover .fade_center:not(:hover){
+  opacity: 20%;
+}
+
+
+/* sidebar */
+  .fade_right {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+}
+
+.fade_right::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;  /* Start at 0% width */
+    height: 0.1em;
+    background-color: var(--btn-color);
+    opacity: 0;
+    transform: scaleX(0);  /* Scale horizontally */
+    transform-origin: left center;  /* Ensure scaling starts from the left */
+    transition: opacity 500ms, transform 500ms, width 500ms;
+}
+
+.fade_right:hover::after,
+.fade_right:focus::after {
+    opacity: 1;
+    width: 100%;  /* Full width on hover/focus */
+    transform: scaleX(1);  /* Full horizontal scale */
+}
+
+/* ///////////// service section //////////// */
+.service_card{
+  box-shadow: 1px 1px 3px silver;
+  transition: all .5s;
+  background-color: white;
+}
+.service_card:hover{
+  background-color: var(--btn-color);
+  color: white;
+  transform: translateY(-10px);
+}
+.service_card:hover span{
+  color: white;
+}
+.service_card:hover p{
+  color: white;
+}
+
+
+/*///////////////////// Products /////////////////////////*/
+.card_content{
+  transition: all 1s;
+  /* border-top-left-radius: ; */
+  border-top-right-radius: 25%;
+}
+.product_card:hover .card_content{
+  top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.product_card{
+  transition: all .5s;
+}
+.product_card:hover{
+  box-shadow:15px 15px 10px silver;
+  transform: translateY(-20px);
+}
+
+
+
+/* Contact form */
+
+.contact_form{
+  max-width:400px;
+  width: 100%;
+  box-shadow: 15px 15px 5px #1f4627;
+  border-radius: 5px;
+  transition: all .5s;
+}
+
+input:focus{
+  border-bottom: 2px solid #32673B;
+  outline: none;
+}
+textarea:focus{
+  border-bottom: 1px solid var(--btn-color);
+  outline: none;
+}
+
+
+
+/*============ variations ============== */
+.variations_card{
+  box-shadow: 5px 5px 5px rgba(212, 212, 212, 0.808);
+}
+
+
+
+
+/* ///////////// footer animations //////////// */
+.footer_animation{
+    height: 100%;
+    width: 100%;
+    background-color: var(--btn-color);
+    position: absolute;
+    top: 40px;
+    left: 0;
+    transition: all .5s;    
+}
+.s_link{
+    overflow: hidden;
+}
+
+.s_link:hover .footer_animation {
+    top: 0;
+    z-index: 1;
+}
+.s_link:hover .icon{
+    @apply text-white
+}
+
+.footer_card{
+    @apply
+     flex
+      flex-col 
+      gap-6
+}
+.child{
+    @apply
+     flex
+      flex-col 
+      gap-3
+}
+footer{
+  color: var(--heading-color);
+}
+.icon{
+  color: var(--btn-color);
+}
+
+/* /////////grayscale//////// */
+
+.company_icons img{
+  opacity: calc(20%);
+  transition: all 0.5s;
+}
+.company_icons img:hover {
+  opacity: 100%;
+
+}
+
+
+
+
+
+
+
+
