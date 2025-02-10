@@ -9,6 +9,7 @@ import Image from "next/image";
 import SideDrawer from "./Drawer";
 
 const Header = () => {
+  
   const pathname = usePathname();
 
   // Define the navigation items
@@ -43,9 +44,9 @@ const Header = () => {
     <div>
       <header className="flex items-center w-full px-[5%] max-[770px]:px-4 py-3  z-10 fixed bg-white text_color">
         <nav className="flex justify-between items-center w-full cursor-pointer">
-          <div className="logo flex gap-4 items-center">
+          <div className="logo max-[770px]:w-full max-[770px]:!justify-between max-[770px]:flex-row-reverse flex gap-4 items-center">
             <SideDrawer />
-            <Image src={LOGO} className="w-32" alt="Logo" />
+            <Image src={LOGO} className="!w-64" alt="Logo" />
           </div>
 
           <div className="navi max-[770px]:hidden flex gap-5 font-bold">
@@ -65,7 +66,7 @@ const Header = () => {
             ))}
           </div>
 
-          <div className="flex gap-0 items-center">
+          <div className="md:block hidden gap-0 items-center">
             <button
               onClick={() => scrollToSection("contact")}
               className="web_btn relative max-[770px]:px-5 max-[770px]:text-sm overflow-hidden"
@@ -73,6 +74,7 @@ const Header = () => {
               <span className="z-10 relative text-[#32673B]">Contact</span>
             </button>
           </div>
+          
         </nav>
       </header>
     </div>

@@ -40,7 +40,7 @@ export default function SideDrawer() {
   };
 
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [placement, setPlacement] = React.useState("left");
+  const [placement, setPlacement] = React.useState("right");
 
   const handleOpen = (placement) => {
     setPlacement(placement);
