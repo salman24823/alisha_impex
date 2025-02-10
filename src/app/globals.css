@@ -306,7 +306,7 @@ footer{
 }
 
 /* /////////grayscale//////// */
-
+/* 
 .company_icons img{
   opacity: calc(20%);
   transition: all 0.5s;
@@ -314,7 +314,7 @@ footer{
 .company_icons img:hover {
   opacity: 100%;
 
-}
+} */
 
 
 
