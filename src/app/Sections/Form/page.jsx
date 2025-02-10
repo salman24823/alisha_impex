@@ -86,7 +86,7 @@ const Form = () => {
             className="contact_form flex flex-col items-center gap-4 p-8 bg-white justify-self-end w-full"
             onSubmit={submitForm}
           >
-            <span className="text-3xl font-bold green">Get in touch</span>
+            <span className="text-3xl font-bold green">Get Sample.</span>
 
             <input
               className="p-2 w-full border-bottom border-gray-200 border-b font-light"

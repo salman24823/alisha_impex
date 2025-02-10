@@ -21,8 +21,8 @@ const Footer = () => {
   ];
 
   const addresses = [
-    { city: "Faisalabad", address: "523 Sylvan Ave, 5th Floor\nMountain View, CA 94041 USA" },
-    { city: "Lahore", address: "123 Main St, Suite 200\nLahore, Punjab 54000 Pakistan" },
+    { city: "Faisalabad", address: "2nd floor,HK Plaza,Makkah Commercial, 208 Chak Road, Adjecent, Canal Road, Eden Valley, Faisalabad, Punjab" },
+    // { city: "Lahore", address: "123 Main St, Suite 200\nLahore, Punjab 54000 Pakistan" },
   ];
 
   const menuItems = [

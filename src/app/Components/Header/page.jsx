@@ -9,7 +9,6 @@ import Image from "next/image";
 import SideDrawer from "./Drawer";
 
 const Header = () => {
-  
   const pathname = usePathname();
 
   // Define the navigation items
@@ -20,6 +19,14 @@ const Header = () => {
     { id: "contact", label: "Contact us" },
     // { id: "blogs", label: "Blogs" },
   ];
+
+  // Function to check if a section is active
+  const isActive = (path, id) => {
+    if (path === "/" && window.location.hash === `#${id}`) {
+      return true;
+    }
+    return path === `/#${id}`;
+  };
 
   // Function to scroll to a specific section with an offset
   const scrollToSection = (id) => {
@@ -50,15 +57,18 @@ const Header = () => {
           </div>
 
           <div className="navi max-[770px]:hidden flex gap-5 font-bold">
-            <button>
-              <Link href={"/"}>Home</Link>
-            </button>
+            <Link 
+              className={`fade_center ${pathname === '/' ? 'active' : ''} hover:text-[#32673B]`} 
+              href={"/"}>
+                Home
+            </Link>
+            
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`fade_center hover:text-[#32673B] ${
-                  pathname === `#${item.id}` ? "text-[#32673B]" : ""
+                  isActive(pathname, item.id) ? "text-[#32673B]" : ""
                 }`}
               >
                 {item.label}
@@ -71,7 +81,7 @@ const Header = () => {
               onClick={() => scrollToSection("contact")}
               className="web_btn relative max-[770px]:px-5 max-[770px]:text-sm overflow-hidden"
             >
-              <span className="z-10 relative text-[#32673B]">Contact</span>
+              <span className="z-10 relative text-[#32673B]">Contact us</span>
             </button>
           </div>
           

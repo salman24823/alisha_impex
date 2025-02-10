@@ -164,9 +164,7 @@ html{
   transform: scaleX(1);
 }
 
-.navi:hover .fade_center:not(:hover){
-  opacity: 20%;
-}
+
 
 
 /* sidebar */

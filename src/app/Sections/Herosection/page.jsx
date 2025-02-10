@@ -29,7 +29,7 @@ const Herosection = () => {
       <div className="bds w-full h-[110vh] grid grid-cols-1 md:grid-cols-2 p-[5%]">
         <div className="alishaimpex_cont flex gap-8 flex-col justify-center items-center md:items-start md:pl-[2%]">
           <h1 className="main_heading md:!text-6xl !text-3xl text-center md:text-left">
-            Global Excellence in Special Chemicals
+            Global Excellence in Special Chemicals and Dyes.
           </h1>
           <p className="text-lg para text-center md:text-left">
             Committed to Delivering High-Quality, Sustainable Chemical Solutions

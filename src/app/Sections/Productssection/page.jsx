@@ -7,7 +7,7 @@ const Productsection = () => {
     <div id="products" className="sections p-[5%] flex items-center flex-col gap-6">
       <h2 className="sub_heading">Our Products</h2>
       <span className="text-green-900 max-[770px]:text-center text-lg font-bold">
-        Global Supply of High-Quality Chemicals
+        Global Supply of High-Quality Chemicals and Dyes.
       </span>
       <hr className="w-[100%]" />
       <div className="product_section grid md:grid-cols-3 grid-cols-1 gap-10">

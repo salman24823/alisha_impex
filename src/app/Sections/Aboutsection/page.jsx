@@ -35,7 +35,7 @@ const Aboutsection = () => {
           is committed to long-term independence and growth, ensuring that
           customers worldwide can procure products directly from local markets.
           Alishaimpex's international logistics concept guarantees the timely
-          supply of high-quality special chemicals, all produced in accordance
+          supply of high-quality special chemicals and textile dyes, all produced in accordance
           with strict environmental and efficiency standards. With production
           plants in Germany and other locations, the company ensures consistent
           quality and specialized formulations tailored to local market needs.

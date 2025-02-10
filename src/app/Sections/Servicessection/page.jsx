@@ -6,7 +6,7 @@ const Servicessection = () => {
   return (
     <div id='services' className='sections p-[5%] w-full flex flex-col items-center gap-7'>
       <h2 className='sub_heading flex gap-2'>Our Services</h2>
-      <span className='text-green-900 text-lg font-bold max-[770px]:text-center'>Global Supply of High-Quality Chemicals</span>
+      <span className='text-green-900 text-lg font-bold max-[770px]:text-center'>Global Supply of High-Quality Chemicals and Dyes</span>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full'>
         <div className='flex flex-col justify-center items-center service_card p-6 gap-5 green'>
           <MdMiscellaneousServices className='size-14' />
