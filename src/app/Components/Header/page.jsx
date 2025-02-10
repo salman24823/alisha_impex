@@ -49,7 +49,7 @@ const Header = () => {
 
           <div className="navi max-[770px]:hidden flex gap-5 font-bold">
             <Link 
-              className="fade_center hover:text-[#32673B]" 
+              className="hover:underline underline-offset-8 hover:text-[#32673B]" 
               href={"/"}>
                 Home
             </Link>
@@ -58,7 +58,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="fade_center hover:text-[#32673B]"
+                className="hover:underline underline-offset-8 hover:text-[#32673B]"
               >
                 {item.label}
               </button>

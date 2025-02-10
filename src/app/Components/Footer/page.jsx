@@ -60,7 +60,7 @@ const Footer = () => {
               <h2 className="text-transparent text-[4rem]">since 2005.</h2>
             </div>
             <span className="mt-8">
-              2025<span className="text-green-800 cursor-pointer">Alishaimpex.</span> All Rights reserved.
+              2025 <span className="text-green-800 cursor-pointer">Alishaimpex.</span> All Rights reserved.
             </span>
           </div>
 

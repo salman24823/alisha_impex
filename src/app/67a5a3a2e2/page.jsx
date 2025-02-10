@@ -71,8 +71,8 @@ export default function Admin() {
 
   return (
     <div className="flex p-5 pt-24 flex-col gap-3">
-      <div className="flex justify-between">
-        <Filters />
+      <div className="flex justify-end">
+        {/* <Filters /> */}
         <ModalPopup products={products} setProducts={setProducts} />
       </div>
 
