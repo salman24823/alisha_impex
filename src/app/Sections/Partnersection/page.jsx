@@ -34,7 +34,7 @@ const Partnersection = () => {
         </div>
         <div className="flex justify-center">
           <img
-            className="h-auto"
+            className="h-36"
             src="./../../../../partners-3.png"
             alt="Partner 3"
             data-aos="fade-up"

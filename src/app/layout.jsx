@@ -17,13 +17,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <HeroUIProvider>
-          <Header />
-          <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
-          {children}
-          <ToastContainer />
-          <Footer />
-        </HeroUIProvider>
+          <HeroUIProvider>
+            <Header />
+            <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
+            {children}
+            <ToastContainer />
+            <Footer />
+          </HeroUIProvider>
       </body>
     </html>
   );
