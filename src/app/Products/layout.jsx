@@ -6,6 +6,7 @@ import Form from "../Sections/Form/page";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import COLOR from "@/../../public/color-wheel.png";
+import Carousel from "../Components/Carousel/page";
 
 const layout = ({ children }) => {
   const pathname = usePathname();
@@ -28,9 +29,12 @@ const layout = ({ children }) => {
   }, [pathname]); // Runs when pathname changes
 
   return (
-    <div className="relative top-[65px] mb-[65px]">
+    <div className="relative overflow-hidden top-[65px] mb-[65px]">
+      
       {/* top banner */}
-      <section className="relative h-[60vh] md:h-[80vh] w-full bg-[url(./../../public/product-reactive.png)] bg-cover bg-no-repeat bg-center">
+
+      <Carousel />
+      {/* <section className="relative h-[60vh] md:h-[80vh] w-full bg-[url(./../../public/product-reactive.png)] bg-cover bg-no-repeat bg-center">
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 to-transparent" />
         <div className="absolute inset-0 flex items-start justify-start p-6 md:p-12">
@@ -45,7 +49,7 @@ const layout = ({ children }) => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* content */}
       <div className="flex my-10 p-5 gap-10">

@@ -7,6 +7,8 @@ import { ourFileRouter } from "./api/uploadthing/core";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import "@uploadthing/react/styles.css";
 import { HeroUIProvider } from "@heroui/react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const metadata = {
   title: "Alishaimpex",
@@ -16,14 +18,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+    
       <body>
-          <HeroUIProvider>
-            <Header />
-            <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
-            {children}
-            <ToastContainer />
-            <Footer />
-          </HeroUIProvider>
+        <HeroUIProvider>
+          <Header />
+          <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
+          {children}
+          <ToastContainer />
+          <Footer />
+        </HeroUIProvider>
       </body>
     </html>
   );
