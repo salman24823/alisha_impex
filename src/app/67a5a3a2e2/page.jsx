@@ -9,35 +9,39 @@ import {
   TableCell,
 } from "@heroui/react";
 import { useState, useEffect } from "react";
-import ModalPopup from "./Modal.";
+import ModalPopup from "./Modal."; 
 import Filters from "./Filters";
 import { BiPencil, BiTrash } from "react-icons/bi";
 import Actions from "./Actions";
 import { toast } from "react-toastify";
+import { useSession } from "next-auth/react";
 
 export default function Admin() {
-  // Initialize state as an object with data as an empty array
+  const { data: session, status } = useSession();
   const [products, setProducts] = useState({ data: [] });
 
   const fetchProducts = async () => {
     try {
       const response = await fetch("/api/product");
       const result = await response.json();
-      // Update state with the entire response
-      setProducts(result);
+      if (response.ok) {
+        setProducts(result);
+      } else {
+        toast.error("Failed to fetch products");
+      }
     } catch (error) {
       console.error("Failed to fetch products:", error);
+      toast.error("Something went wrong");
     }
   };
 
   useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  console.log(products, "FBproducts");
+    if (status === "authenticated") {
+      fetchProducts();
+    }
+  }, [status]);
 
   async function handleDelete(productId) {
-
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this product?"
     );
@@ -59,8 +63,6 @@ export default function Admin() {
         toast.success("Deleted Successfully");
 
         fetchProducts();
-
-        return
       } else {
         toast.error("Failed to Delete.");
       }
@@ -69,6 +71,22 @@ export default function Admin() {
     }
   }
 
+  if (status === "loading") return "Loading...";
+  if (!session) {
+    return (
+      <div className="w-full h-screen flex flex-col justify-center items-center bg-gray-50">
+        <h1 className="text-4xl font-bold text-red-500 mb-4">
+          Access Denied
+        </h1>
+        <p className="text-lg text-gray-700 mb-6">
+          You do not have permission to access this page.
+        </p>
+        <p className="text-sm text-gray-500">
+          Please contact the administrator if you believe this is an error.
+        </p>
+      </div>
+    );
+  }
   return (
     <div className="flex p-5 pt-24 flex-col gap-3">
       <div className="flex justify-end">
