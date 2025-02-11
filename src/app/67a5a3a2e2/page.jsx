@@ -19,8 +19,10 @@ import { useSession } from "next-auth/react";
 export default function Admin() {
   const { data: session, status } = useSession();
   const [products, setProducts] = useState({ data: [] });
+  const [isLoading, setIsLoading] = useState(true); // Loading state for data fetching
 
   const fetchProducts = async () => {
+    setIsLoading(true); // Start loading
     try {
       const response = await fetch("/api/product");
       const result = await response.json();
@@ -32,12 +34,16 @@ export default function Admin() {
     } catch (error) {
       console.error("Failed to fetch products:", error);
       toast.error("Something went wrong");
+    } finally {
+      setIsLoading(false); // Stop loading
     }
   };
 
   useEffect(() => {
     if (status === "authenticated") {
       fetchProducts();
+    } else if (status === "unauthenticated") {
+      setIsLoading(false); // Stop loading if user is not authenticated
     }
   }, [status]);
 
@@ -71,7 +77,16 @@ export default function Admin() {
     }
   }
 
-  if (status === "loading") return "Loading...";
+  // Loading state while checking session status
+  if (status === "loading") {
+    return (
+      <div className="w-full h-screen flex justify-center items-center bg-gray-50">
+        <p className="text-lg text-gray-700">Loading session...</p>
+      </div>
+    );
+  }
+
+  // Access denied if user is not authenticated or not an admin
   if (!session) {
     return (
       <div className="w-full h-screen flex flex-col justify-center items-center bg-gray-50">
@@ -87,6 +102,16 @@ export default function Admin() {
       </div>
     );
   }
+
+  // Loading state while fetching products
+  if (isLoading) {
+    return (
+      <div className="w-full h-screen flex justify-center items-center bg-gray-50">
+        <p className="text-lg text-gray-700">Wait a moment...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="flex p-5 pt-24 flex-col gap-3">
       <div className="flex justify-end">
