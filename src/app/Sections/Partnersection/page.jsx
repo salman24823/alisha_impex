@@ -15,7 +15,7 @@ const Partnersection = () => {
         Partners who work's <br className="hidden md:block" /> with Alishaimpex
       </h2>
       <div className="company_icons justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-[5%]">
-        <div className="flex justify-center">
+        <div className="flex items-center justify-center">
           <img
             className="h-auto"
             src="./../../../../partners-1.png"
@@ -23,7 +23,7 @@ const Partnersection = () => {
             data-aos="fade-up"
           />
         </div>
-        <div className="flex justify-center">
+        <div className="flex items-center justify-center">
           <img
             className="h-auto"
             src="./../../../../partners-2.png"
@@ -32,7 +32,7 @@ const Partnersection = () => {
             data-aos-delay="100"
           />
         </div>
-        <div className="flex justify-center">
+        <div className="flex items-center justify-center">
           <img
             className="h-36"
             src="./../../../../partners-3.png"
@@ -41,7 +41,7 @@ const Partnersection = () => {
             data-aos-delay="200"
           />
         </div>
-        <div className="flex justify-center">
+        <div className="flex items-center justify-center">
           <img
             className="h-auto"
             src="./../../../../partners-4.png"
