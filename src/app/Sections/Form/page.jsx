@@ -1,20 +1,25 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { toast } from "react-toastify";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Form = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false); // Loading state
+  const [isLoading, setIsLoading] = useState(false);
 
   async function submitForm(e) {
-    e.preventDefault(); // Prevent page reload
-
-    setIsLoading(true); // Set loading to true
+    e.preventDefault();
+    setIsLoading(true);
 
     try {
       const response = await fetch("/api/Contact", {
@@ -28,12 +33,10 @@ const Form = () => {
       console.log(response, "response");
 
       if (response.ok) {
-        // Play success sound
         const successAudio = new Audio("/mp3/successRing.mp3");
         successAudio.play();
 
         toast.success("Form Submitted Successfully");
-        // Clear form fields after successful submission
         setName("");
         setPhone("");
         setEmail("");
@@ -44,49 +47,55 @@ const Form = () => {
     } catch (error) {
       toast.error("Something went wrong");
     } finally {
-      setIsLoading(false); // Reset loading state
+      setIsLoading(false);
     }
   }
 
   return (
-    <div id="contact" className="sections w-full p-[5%] greenback">
+    <div id="contact" className="!overflow-hidden sections w-full p-[5%] greenback">
       <div className="contact_section grid grid-rows-1 grid-cols-1 md:grid-cols-[1.5fr,1fr] gap-8">
-        <div className="flex flex-col gap-12">
-          <h2 className="text-white text-3xl font-bold">
+        
+        <div className="flex flex-col gap-12" data-aos="fade-right">
+          <h2 className="text-white text-3xl font-bold" data-aos="fade-up">
             Have questions? Fill out our form, and we’ll get back to you soon!
           </h2>
-          <p className="text-white w-full md:w-[80%]">
-            Essentials is designed with your customers in mind, so you can track
-            and analyze all your data in one central location. There are no
-            limits to how you can look at your data.
+          <p className="text-white w-full md:w-[80%]" data-aos="fade-up" data-aos-delay="200">
+            We're here to help! Find answers to common questions about our
+            products, services, and processes. If you need further assistance,
+            reach out to us anytime.
           </p>
-          <div className="ques_list text-white">
+          <div className="ques_list text-white" data-aos="fade-up" data-aos-delay="400">
             <ul className="font-bold flex flex-col gap-4">
               <li className="flex items-center gap-2">
                 <FaRegCheckCircle />
-                Tendis tempor ante acu ipsum finibus.
+                What types of chemicals and dyes do you supply?
               </li>
               <li className="flex items-center gap-2">
                 <FaRegCheckCircle />
-                Pellentesque habitant morbi tristique.
+                Do you offer bulk ordering and international shipping?
               </li>
               <li className="flex items-center gap-2">
                 <FaRegCheckCircle />
-                Cras facilisis tortor in metus ultrices.
+                Are your products compliant with environmental standards?
               </li>
               <li className="flex items-center gap-2">
                 <FaRegCheckCircle />
-                Maecenas volutpat leo in metus pulvinar.
+                How can I request a quote or sample?
               </li>
             </ul>
           </div>
         </div>
-        <div className="w-full md:w-auto">
+
+        <div className="w-full md:w-auto" data-aos="fade-left">
           <form
             className="contact_form flex flex-col items-center gap-4 p-8 bg-white justify-self-end w-full"
             onSubmit={submitForm}
+            data-aos="zoom-in"
+            data-aos-delay="200"
           >
-            <span className="text-3xl font-bold green">Get Sample.</span>
+            <span className="text-3xl font-bold green" data-aos="fade-up">
+              Get Sample.
+            </span>
 
             <input
               className="p-2 w-full border-bottom border-gray-200 border-b font-light"
@@ -95,6 +104,8 @@ const Form = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
+              data-aos="fade-up"
+              data-aos-delay="200"
             />
             <input
               className="p-2 w-full border-gray-200 border-b font-light"
@@ -103,6 +114,8 @@ const Form = () => {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required
+              data-aos="fade-up"
+              data-aos-delay="300"
             />
             <input
               className="p-2 w-full border-gray-200 border-b font-light"
@@ -111,6 +124,8 @@ const Form = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              data-aos="fade-up"
+              data-aos-delay="400"
             />
             <textarea
               className="p-2 w-full border-gray-200 border-b font-light"
@@ -119,12 +134,16 @@ const Form = () => {
               onChange={(e) => setMessage(e.target.value)}
               required
               rows="3"
+              data-aos="fade-up"
+              data-aos-delay="500"
             ></textarea>
 
             <button
               className="w-full text-white rounded-[5px] py-2 font-bold greenback"
               type="submit"
               disabled={isLoading}
+              data-aos="fade-up"
+              data-aos-delay="600"
             >
               {isLoading ? "Submitting..." : "Submit"}
             </button>
