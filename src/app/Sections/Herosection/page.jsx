@@ -35,10 +35,10 @@ const Herosection = () => {
       <div className="bds w-full h-[110vh] grid grid-cols-1 md:grid-cols-2 p-[5%]">
         <div className="alishaimpex_cont flex gap-8 flex-col justify-center items-center md:items-start md:pl-[2%]" data-aos="fade-right">
           <h1 className="main_heading md:!text-6xl !text-3xl text-center md:text-left" data-aos="fade-up">
-            Global Excellence in Special Chemicals and Dyes.
+           Global excellence in dyes and chemicals.
           </h1>
           <p className="text-lg para text-center md:text-left" data-aos="fade-up" data-aos-delay="200">
-            Committed to Delivering High-Quality, Sustainable Chemical Solutions
+            Committed to Delivering High-Quality, Sustainable Dyes and Chemical Solutions
             Tailored to Local Market Needs, Ensuring Global Reach, Timely
             Supply, and Consistent Excellence Since 2005
           </p>

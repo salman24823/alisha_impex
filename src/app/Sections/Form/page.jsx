@@ -68,19 +68,27 @@ const Form = () => {
             <ul className="font-bold flex flex-col gap-4">
               <li className="flex items-center gap-2">
                 <FaRegCheckCircle />
-                What types of chemicals and dyes do you supply?
+                How can I start with Alisha Impex?
               </li>
               <li className="flex items-center gap-2">
                 <FaRegCheckCircle />
-                Do you offer bulk ordering and international shipping?
+                What are our payment terms?
               </li>
               <li className="flex items-center gap-2">
                 <FaRegCheckCircle />
-                Are your products compliant with environmental standards?
+                What are our certifications?
               </li>
               <li className="flex items-center gap-2">
                 <FaRegCheckCircle />
-                How can I request a quote or sample?
+                What kind of dyes we provide?
+              </li>
+              <li className="flex items-center gap-2">
+                <FaRegCheckCircle />
+                How do we deal, with sales tax and without sales tax?
+              </li>
+              <li className="flex items-center gap-2">
+                <FaRegCheckCircle />
+                We provide x-stock and all dyes in EFS facility?
               </li>
             </ul>
           </div>

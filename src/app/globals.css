@@ -198,11 +198,13 @@ html{
 /* ///////////// service section //////////// */
 .service_card{
   box-shadow: 1px 1px 3px silver;
-  transition: all .5s;
+  transition: all 1s;
   background-color: white;
 }
 .service_card:hover{
   background-color: var(--btn-color);
+  transition: all smooth 5s;
+
   color: white;
   transform: translateY(-10px);
 }

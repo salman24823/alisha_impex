@@ -7,7 +7,7 @@ const Productsection = () => {
     <div id="products" className="sections p-[5%] flex items-center flex-col gap-6">
       <h2 className="sub_heading" data-aos="fade-up">Our Products</h2>
       <span className="text-green-900 max-[770px]:text-center text-lg font-bold" data-aos="fade-up" data-aos-delay="100">
-        Global Supply of High-Quality Chemicals and Dyes.
+        Supply of high quality dyes and chemicals
       </span>
       <hr className="w-[100%]" data-aos="fade-up" data-aos-delay="200" />
       <div className="product_section grid md:grid-cols-3 grid-cols-1 gap-10">
@@ -23,8 +23,7 @@ const Productsection = () => {
                 Explore more
               </Link>
               <p className="text-center">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Provident molestiae veniam quisquam repellat, harum itaque?
+                It's commonly used in textile industries for dying purpose.
               </p>
             </div>
           </div>
@@ -41,8 +40,7 @@ const Productsection = () => {
                 Explore more
               </Link>
               <p className="text-center">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Provident molestiae veniam quisquam repellat, harum itaque?
+                Specially designed to colour synthetic fiber like acrylic and nylon
               </p>
             </div>
           </div>
@@ -59,8 +57,7 @@ const Productsection = () => {
                 Explore more
               </Link>
               <p className="text-center">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Provident molestiae veniam quisquam repellat, harum itaque?
+                Commonly used for cotton and other cellulose fibers.
               </p>
             </div>
           </div>
@@ -77,8 +74,7 @@ const Productsection = () => {
                 Explore more
               </Link>
               <p className="text-center">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Provident molestiae veniam quisquam repellat, harum itaque?
+                Primary used for coloring synthetic fiber such as polyester and nylon.
               </p>
             </div>
           </div>
@@ -95,8 +91,7 @@ const Productsection = () => {
                 Explore more
               </Link>
               <p className="text-center">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Provident molestiae veniam quisquam repellat, harum itaque?
+                Widely used as a thickening, binding, and stabilizing agent in industries
               </p>
             </div>
           </div>
@@ -113,8 +108,7 @@ const Productsection = () => {
                 Explore more
               </Link>
               <p className="text-center">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Provident molestiae veniam quisquam repellat, harum itaque?
+               Water soluble colorants that want directly to fiber or primary cotton.
               </p>
             </div>
           </div>

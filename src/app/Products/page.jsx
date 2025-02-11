@@ -39,7 +39,7 @@ const Products = () => {
       {loading ? (
         <div className="w-full text-center text-xl">Loading...</div>
       ) : (
-        <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8 variations_table bg-no repeat">
+        <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-8 variations_table bg-no repeat">
           {reactiveDyes.map((value, index) => (
             <div
               style={{
