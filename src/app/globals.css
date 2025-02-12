@@ -53,12 +53,16 @@ html{
 .greenback{
   background-color: var(--btn-color);
 }
+
+.slider_cont{
+  background-color: #32673b9d;
+}
 /*///////////////////// WEB BUTTON /////////////////////////*/
 
 .web_btn{
   border: 1px solid var(--btn-color);
   @apply bg-transparent 
-  px-8 py-2 
+  px-7 py-2 
   rounded-md  
   border-2 
   text-white  
