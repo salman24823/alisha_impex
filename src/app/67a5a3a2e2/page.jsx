@@ -9,35 +9,45 @@ import {
   TableCell,
 } from "@heroui/react";
 import { useState, useEffect } from "react";
-import ModalPopup from "./Modal.";
+import ModalPopup from "./Modal."; 
 import Filters from "./Filters";
 import { BiPencil, BiTrash } from "react-icons/bi";
 import Actions from "./Actions";
 import { toast } from "react-toastify";
+import { useSession } from "next-auth/react";
 
 export default function Admin() {
-  // Initialize state as an object with data as an empty array
+  const { data: session, status } = useSession();
   const [products, setProducts] = useState({ data: [] });
+  const [isLoading, setIsLoading] = useState(true); // Loading state for data fetching
 
   const fetchProducts = async () => {
+    setIsLoading(true); // Start loading
     try {
       const response = await fetch("/api/product");
       const result = await response.json();
-      // Update state with the entire response
-      setProducts(result);
+      if (response.ok) {
+        setProducts(result);
+      } else {
+        toast.error("Failed to fetch products");
+      }
     } catch (error) {
       console.error("Failed to fetch products:", error);
+      toast.error("Something went wrong");
+    } finally {
+      setIsLoading(false); // Stop loading
     }
   };
 
   useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  console.log(products, "FBproducts");
+    if (status === "authenticated") {
+      fetchProducts();
+    } else if (status === "unauthenticated") {
+      setIsLoading(false); // Stop loading if user is not authenticated
+    }
+  }, [status]);
 
   async function handleDelete(productId) {
-
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this product?"
     );
@@ -59,14 +69,47 @@ export default function Admin() {
         toast.success("Deleted Successfully");
 
         fetchProducts();
-
-        return
       } else {
         toast.error("Failed to Delete.");
       }
     } catch (error) {
       toast.error("Something went wrong");
     }
+  }
+
+  // Loading state while checking session status
+  if (status === "loading") {
+    return (
+      <div className="w-full h-screen flex justify-center items-center bg-gray-50">
+        <p className="text-lg text-gray-700">Loading session...</p>
+      </div>
+    );
+  }
+
+  // Access denied if user is not authenticated or not an admin
+  if (!session) {
+    return (
+      <div className="w-full h-screen flex flex-col justify-center items-center bg-gray-50">
+        <h1 className="text-4xl font-bold text-red-500 mb-4">
+          Access Denied
+        </h1>
+        <p className="text-lg text-gray-700 mb-6">
+          You do not have permission to access this page.
+        </p>
+        <p className="text-sm text-gray-500">
+          Please contact the administrator if you believe this is an error.
+        </p>
+      </div>
+    );
+  }
+
+  // Loading state while fetching products
+  if (isLoading) {
+    return (
+      <div className="w-full h-screen flex justify-center items-center bg-gray-50">
+        <p className="text-lg text-gray-700">Wait a moment...</p>
+      </div>
+    );
   }
 
   return (

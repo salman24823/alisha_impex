@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";  // Import AOS styles
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import CEO from "@/../../public/CEO.png"
 
 const Aboutsection = () => {
   useEffect(() => {
@@ -31,6 +33,7 @@ const Aboutsection = () => {
       data-aos="fade-up"
     >
       <div className="flex flex-col gap-5 md:justify-between" data-aos="fade-right">
+        
         <h2 className="sub_heading" data-aos="fade-up">ABOUT US</h2>
         <span className="text-green-900 text-lg font-bold" data-aos="fade-up" data-aos-delay="200">
           We provide a massive range of Dyes and chemical products conforming to
@@ -45,10 +48,11 @@ const Aboutsection = () => {
             <span>Contact us</span>
           </button>
         </div>
+
       </div>
 
       <div className="sin flex justify-center items-center mt-5 md:mt-0" data-aos="fade-left">
-        <h2 className="text-transparent text-[4rem] md:text-[6rem]"></h2>
+
       </div>
     </div>
   );

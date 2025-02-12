@@ -9,6 +9,7 @@ import "@uploadthing/react/styles.css";
 import { HeroUIProvider } from "@heroui/react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SessionWrapper from "./Components/SessionWrapper/SessionWrapper";
 
 export const metadata = {
   title: "Alishaimpex",
@@ -18,15 +19,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    
       <body>
-        <HeroUIProvider>
-          <Header />
-          <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
-          {children}
-          <ToastContainer />
-          <Footer />
-        </HeroUIProvider>
+        <SessionWrapper>
+          <HeroUIProvider>
+            <Header />
+            <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
+            {children}
+            <ToastContainer />
+            <Footer />
+          </HeroUIProvider>
+        </SessionWrapper>
       </body>
     </html>
   );

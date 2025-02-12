@@ -52,6 +52,7 @@ const layout = ({ children }) => {
       </section> */}
 
       {/* content */}
+      
       <div className="flex my-10 p-5 gap-10">
         <Productsidebar />
 
