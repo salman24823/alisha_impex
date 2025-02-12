@@ -40,15 +40,15 @@ const HPMC = () => {
         <ul className="font-bold flex flex-col gap-4">
                       <li className="flex items-center gap-2">
                         <FaRegCheckCircle className="text-[#32673B]"/>
-                        Excellent adhesion and binding properties
+                        Excellent adhesion and binding properties.
                       </li>
                       <li className="flex items-center gap-2">
                         <FaRegCheckCircle className="text-[#32673B]" />
-                        Enhanced flowability and workability
+                        Enhanced flowability and workability.
                       </li>
                       <li className="flex items-center gap-2">
                         <FaRegCheckCircle className="text-[#32673B]" />
-                        Water retention and film forming
+                        Water retention and film forming.
                       </li>
                       <li className="flex items-center gap-2">
                         <FaRegCheckCircle className="text-[#32673B]" />
@@ -56,7 +56,7 @@ const HPMC = () => {
                       </li>
                       <li className="flex items-center gap-2">
                         <FaRegCheckCircle className="text-[#32673B]" />
-                        HPMC acts as a thickener in paint formulations
+                        HPMC acts as a thickener in paint formulations.
                       </li>
                     </ul>
       </div>
