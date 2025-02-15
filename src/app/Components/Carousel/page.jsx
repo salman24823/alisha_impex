@@ -28,7 +28,7 @@ export default function Carousel() {
       <div className="relative max-[770px]:!flex flex-col-reverse">
         <div className="slider_cont max-[770px]:!w-full img_cont p-[5%] w-[30%] md:h-full h-[500px] absolute max-[770px]:static z-10 flex flex-col gap-6">
           <h1 className="text-3xl font-bold text-white">REACTIVE DYES</h1>
-          <p className="text-lg text-white ">Reactive dyes explore more: Reactive dyes are a type of dye that chemically bond with fibers, especially cellulose and protein fibers, during the dyeing process. This strong bond ensures vibrant, long-lasting colors that are resistant to fading and washing. They are commonly used in textile industries for dyeing fabrics like cotton and wool.</p>
+          <p className="text-lg text-white ">Reactive dyes : Reactive dyes are a type of dye that chemically bond with fibers, especially cellulose and protein fibers, during the dyeing process. This strong bond ensures vibrant, long-lasting colors that are resistant to fading and washing. They are commonly used in textile industries for dyeing fabrics like cotton and wool.</p>
         </div>
         <Image src={REACTIVE} className="w-full h-[100%] z--1" />
       </div>
@@ -49,7 +49,7 @@ export default function Carousel() {
       <div className="relative max-[770px]:!flex flex-col-reverse">
       <div className="slider_cont max-[770px]:!w-full img_cont p-[5%] w-[30%] md:h-full h-[500px] absolute max-[770px]:static z-10 flex flex-col gap-6">
           <h1 className="text-3xl font-bold text-white">DISPERSE DYES</h1>
-          <p className="text-lg text-white ">Disperse dyes explore more: Disperse dyes are water-insoluble dyes primarily used for coloring synthetic fibers, such as polyester and nylon. They are finely ground and applied in a dispersed form, offering vibrant colors and good wash fastness.</p>
+          <p className="text-lg text-white ">Disperse dyes : Disperse dyes are water-insoluble dyes primarily used for coloring synthetic fibers, such as polyester and nylon. They are finely ground and applied in a dispersed form, offering vibrant colors and good wash fastness.</p>
         </div>
       <Image src={DIRECT} className="w-full h-[100%]" />
       </div>
