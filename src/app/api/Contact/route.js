@@ -44,10 +44,13 @@ async function sendEmailToAdmin(name, phone, email, message) {
   try {
     const transporter = nodemailer.createTransport({
       service: "gmail",
+      secure: false, // SSL
       auth: {
         user: process.env.ADMIN_EMAIL, // Use the first email for authentication
         pass: process.env.EMAIL_PASS,
       },
+      logger: true, // Logs SMTP communication
+      debug: true, // Enables debugging
     });
 
     const mailOptions = {
