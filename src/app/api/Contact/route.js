@@ -44,16 +44,18 @@ async function sendEmailToAdmin(name, phone, email, message) {
   try {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
-      port: 465, // 587 for STARTTLS, 465 for SSL
-      secure: true, // Use `true` for port 465 (SSL), false for 587 (TLS)
+      port: 587, // Port 587 (STARTTLS)
+      secure: false, // Must be false for TLS
       auth: {
-        user: process.env.ADMIN_EMAIL,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.ADMIN_EMAIL, // Your Gmail
+        pass: process.env.EMAIL_PASS, // Your App Password (not normal password)
       },
-      logger: true, // Logs SMTP communication
-      debug: true, // Enables debugging
+      tls: {
+        rejectUnauthorized: false, // Ignore SSL issues
+      },
+      logger: true, // Log SMTP communication
+      debug: true, // Enable debugging
     });
-    
 
     const mailOptions = {
       from: process.env.EMAIL_USER.split(",")[0], // Send from the first email
