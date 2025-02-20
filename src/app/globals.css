@@ -99,7 +99,7 @@ html{
   relative 
   overflow-hidden
 }
-
+.web{}
 .web_btn::before{
   content: "";
   position: absolute;
