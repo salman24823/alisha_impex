@@ -4,8 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";  // Import AOS styles
 import { usePathname } from "next/navigation";
-import Image from "next/image";
-import CEO from "@/../../public/CEO.png"
+
 
 const Aboutsection = () => {
   useEffect(() => {

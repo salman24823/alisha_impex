@@ -2,8 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import React, { useEffect } from "react";
-import { BiSolidUpArrow } from "react-icons/bi";
-import { GoArrowUpRight } from "react-icons/go";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -25,11 +23,13 @@ const Herosection = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+  
 
   return (
     <div
       id="home"
-      className="sec w-full h-[110vh] bg-[url(./../../public/landing1.png)] bg-no-repeat bg-cover relative"
+      className="sec w-full h-[110vh] 
+      bg-no-repeat bg-cover relative"
       data-aos="fade-in"
     >
       <div className="bds w-full h-[110vh] grid grid-cols-1 md:grid-cols-2 p-[5%]">

@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useEffect } from 'react';
-import { MdMiscellaneousServices, MdOutlineElectricalServices, MdOutlineMedicalServices } from "react-icons/md";
-import { SiAmazonwebservices } from "react-icons/si";
+import { LuBadgeCheck, LuLeaf, LuPaintBucket } from "react-icons/lu";
+import { RiColorFilterAiLine } from "react-icons/ri";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -20,29 +20,29 @@ const Servicessection = () => {
       </span>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full '>
         <div className='relative' data-aos="zoom-in" data-aos-delay="300">
-          <div className='service_card duration-500 flex flex-col justify-center items-center p-6 gap-5 green' >
-            <MdMiscellaneousServices className='size-14' />
+          <div className='service_card h-full duration-500 flex flex-col justify-center items-center p-6 gap-5 green' >
+            <LuLeaf className='size-14' />
             <span className='text_color text-2xl font-bold'>Quality</span>
             <p className='text-center para text-base'>We provide the best quality control and assurance.</p>
           </div>
         </div>
         <div className='relative' data-aos="zoom-in" data-aos-delay="400">
-          <div className='flex flex-col justify-center items-center service_card p-5 gap-5 green'>
-            <SiAmazonwebservices className='size-14' />
+          <div className='flex flex-col justify-center items-center service_card h-full p-5 gap-5 green'>
+            <RiColorFilterAiLine className='size-14' />
             <span className='text_color text-2xl font-bold'>Sampling</span>
             <p className='text-center para text-base'>Allowing customers to test color samples Sustainability</p>
           </div>
         </div>
         <div className='relative' data-aos="zoom-in" data-aos-delay="500">
-          <div className='flex flex-col justify-center items-center service_card p-5 gap-5 green' >
-            <MdOutlineElectricalServices className='size-14' />
+          <div className='flex flex-col justify-center items-center service_card h-full p-5 gap-5 green' >
+            <LuPaintBucket className='size-14' />
             <span className='text_color text-2xl font-bold'>Flexible Quantity</span>
             <p className='text-center para text-base'>Allowing customers to place small or large orders</p>
           </div>
         </div>
         <div className='relative'  data-aos="zoom-in" data-aos-delay="600">
-          <div className='flex flex-col justify-center items-center service_card p-5 gap-5 green'>
-            <MdOutlineMedicalServices className='size-14' />
+          <div className='flex flex-col justify-center items-center service_card h-full p-5 gap-5 green'>
+            <LuBadgeCheck className='size-14' />
             <span className='text_color text-2xl font-bold'>Trusted Supplier</span>
             <p className='text-center para text-base'>We have an efficient supply-chain management.</p>
           </div>

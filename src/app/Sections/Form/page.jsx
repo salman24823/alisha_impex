@@ -12,8 +12,10 @@ const Form = () => {
   }, []);
 
   const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -27,7 +29,7 @@ const Form = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, phone, email, message }),
+        body: JSON.stringify({ name, company, phone, email, subject, message }),
       });
 
       console.log(response, "response");
@@ -38,8 +40,10 @@ const Form = () => {
 
         toast.success("Form Submitted Successfully");
         setName("");
+        setCompany("");
         setPhone("");
         setEmail("");
+        setSubject("");
         setMessage("");
       } else {
         toast.error("Failed to submit form");
@@ -128,13 +132,33 @@ const Form = () => {
             </div>
             <input
               className="p-2 w-full border-gray-200 border-b font-light"
-              type="number"
+              type="text"
+              placeholder="Company"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+              required
+              data-aos="fade-up"
+              data-aos-delay="300"
+            />
+            <input
+              className="p-2 w-full border-gray-200 border-b font-light"
+              type="text"
               placeholder="Phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required
               data-aos="fade-up"
-              data-aos-delay="300"
+              data-aos-delay="400"
+            />
+            <input
+              className="p-2 w-full border-gray-200 border-b font-light"
+              type="text"
+              placeholder="Subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              required
+              data-aos="fade-up"
+              data-aos-delay="500"
             />
             <input
               className="p-2 w-full border-gray-200 border-b font-light"
@@ -144,7 +168,7 @@ const Form = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
               data-aos="fade-up"
-              data-aos-delay="400"
+              data-aos-delay="600"
             />
             <textarea
               className="p-2 w-full border-gray-200 border-b font-light"
@@ -154,7 +178,7 @@ const Form = () => {
               required
               rows="3"
               data-aos="fade-up"
-              data-aos-delay="500"
+              data-aos-delay="700"
             ></textarea>
 
             <button
@@ -162,7 +186,7 @@ const Form = () => {
               type="submit"
               disabled={isLoading}
               data-aos="fade-up"
-              data-aos-delay="600"
+              data-aos-delay="800"
             >
               {isLoading ? "Submitting..." : "Submit"}
             </button>
