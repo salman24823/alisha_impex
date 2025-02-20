@@ -108,7 +108,7 @@ const Form = () => {
             <span className="text-3xl font-bold green" data-aos="fade-up">
               Get in touch.
             </span>
-            <div className="flex gap-2">
+            <div className="flex gap-3">
             <input
               className="p-2 w-full border-bottom border-gray-200 border-b font-light"
               type="text"
@@ -119,17 +119,6 @@ const Form = () => {
               data-aos="fade-up"
               data-aos-delay="200"
             />
-             <input
-              className="p-2 w-full border-bottom border-gray-200 border-b font-light"
-              type="text"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              data-aos="fade-up"
-              data-aos-delay="200"
-            />
-            </div>
             <input
               className="p-2 w-full border-gray-200 border-b font-light"
               type="text"
@@ -140,6 +129,8 @@ const Form = () => {
               data-aos="fade-up"
               data-aos-delay="300"
             />
+            </div>
+            <div className="flex gap-3">
             <input
               className="p-2 w-full border-gray-200 border-b font-light"
               type="text"
@@ -150,6 +141,17 @@ const Form = () => {
               data-aos="fade-up"
               data-aos-delay="400"
             />
+             <input
+              className="p-2 w-full border-gray-200 border-b font-light"
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              data-aos="fade-up"
+              data-aos-delay="600"
+            />
+            </div>
             <input
               className="p-2 w-full border-gray-200 border-b font-light"
               type="text"
@@ -160,16 +162,7 @@ const Form = () => {
               data-aos="fade-up"
               data-aos-delay="500"
             />
-            <input
-              className="p-2 w-full border-gray-200 border-b font-light"
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              data-aos="fade-up"
-              data-aos-delay="600"
-            />
+           
             <textarea
               className="p-2 w-full border-gray-200 border-b font-light"
               placeholder="Message"

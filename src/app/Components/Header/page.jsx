@@ -1,6 +1,7 @@
 "use client"; // Mark as client-side component
 
 import { usePathname } from "next/navigation"; // Use usePathname from Next.js 14
+import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import React from "react";
 import LOGO from "@/../../public/Logo.png";
@@ -66,12 +67,13 @@ const Header = () => {
           </div>
 
           <div className="md:block hidden gap-0 items-center">
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="web_btn relative max-[770px]:px-5 max-[770px]:text-sm overflow-hidden"
+            <Link href={"https://api.whatsapp.com/send?phone=923216678600&text&type=phone_number&app_absent=0"} target="blank"><button
+              // onClick={() => scrollToSection("contact")}
+              className="web_btn relative max-[770px]:px-1 max-[770px]:text-sm overflow-hidden"
             >
-              <span className="z-10 relative text-[#32673B]">Contact us</span>
+              <span className="z-10 relative text-[#32673B] flex gap-4">Contact us<FaWhatsapp className=" h-6 w-6"/></span>
             </button>
+            </Link>
           </div>
           
         </nav>
