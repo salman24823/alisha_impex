@@ -44,7 +44,7 @@ const Aboutsection = () => {
         </p>
 
         <div className="flex w-full md:justify-start justify-center mt-3">
-          <button onClick={() => scrollToSection("products")} className="web_btn" data-aos="zoom-in" data-aos-delay="400">
+          <button onClick={() => scrollToSection("contact")} className="web_btn" data-aos="zoom-in" data-aos-delay="400">
             <span>Contact us</span>
           </button>
         </div>

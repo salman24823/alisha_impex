@@ -54,14 +54,14 @@ const Footer = () => {
 
           <div className="flex col-span-3 flex-col gap-4">
             <div className="logo flex gap-2 items-center">
-              <Image src={LOGO} width={200} alt="Logo" />
+              <Image src={LOGO} width={350} alt="Logo" />
             </div>
             <div className="sin">
-              <h2 className="text-transparent text-[4rem]">since 2005.</h2>
+              <h2 className="text-transparent text-[3rem]">since 2005.</h2>
             </div>
-            <span className="mt-8">
+            {/* <span className="mt-8">
               2025 <span className="text-green-800 cursor-pointer">Alishaimpex.</span> All Rights reserved.
-            </span>
+            </span> */}
           </div>
 
           <div className="footer_card col-span-2">
@@ -112,13 +112,13 @@ const Footer = () => {
           </div>
 
           <div className="child col-span-2">
-            <span className="text-[1.5rem]">Main Menu</span>
-            <div className="nav_links flex flex-col items-start gap-1 font-bold">
+            <span className="text-[1.5rem]">Quick Links</span>
+            <div className="nav_links flex flex-col items-start gap-2 font-bold">
               {menuItems.map((item, index) => (
                 <button
                   key={index}
                   onClick={() => scrollToSection(item.id)}
-                  className="hover:text-green-800 hover:pl-4 transition-all duration-200"
+                  className="hover:text-green-800 hover:pl-4 hover:border-green-800 hover:border-l-[2px] transition-all duration-200"
                 >
                   {item.label}
                 </button>

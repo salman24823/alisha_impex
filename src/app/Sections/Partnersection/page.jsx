@@ -11,9 +11,9 @@ const Partnersection = () => {
   }, []);
 
   return (
-    <div className="w-full sections p-[5%]" data-aos="fade-up">
-      <h2 className="text-3xl md:text-5xl text-center md:text-start leading-tight font-bold text-gray-800">
-        Partners who work's <br className="hidden md:block" /> with Alishaimpex
+    <div className="w-full sections p-[5%]" data-aos="fade-up flex flex-col justify-center">
+      <h2 className="text-3xl md:text-5xl text-center  leading-tight font-bold text-gray-800">
+        Our Partners
       </h2>
       <div className="company_icons justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-[5%]">
         <div className="flex items-center justify-center">

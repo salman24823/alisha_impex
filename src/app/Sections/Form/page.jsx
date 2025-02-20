@@ -82,14 +82,14 @@ const Form = () => {
                 <FaRegCheckCircle />
                 What kind of dyes we provide?
               </li>
-              <li className="flex items-center gap-2">
+              {/* <li className="flex items-center gap-2">
                 <FaRegCheckCircle />
                 How do we deal, with sales tax and without sales tax?
-              </li>
-              <li className="flex items-center gap-2">
+              </li> */}
+              {/* <li className="flex items-center gap-2">
                 <FaRegCheckCircle />
                 We provide x-stock and all dyes in EFS facility?
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -102,9 +102,9 @@ const Form = () => {
             data-aos-delay="200"
           >
             <span className="text-3xl font-bold green" data-aos="fade-up">
-              Get Sample.
+              Get in touch.
             </span>
-
+            <div className="flex gap-2">
             <input
               className="p-2 w-full border-bottom border-gray-200 border-b font-light"
               type="text"
@@ -115,6 +115,17 @@ const Form = () => {
               data-aos="fade-up"
               data-aos-delay="200"
             />
+             <input
+              className="p-2 w-full border-bottom border-gray-200 border-b font-light"
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              data-aos="fade-up"
+              data-aos-delay="200"
+            />
+            </div>
             <input
               className="p-2 w-full border-gray-200 border-b font-light"
               type="number"
