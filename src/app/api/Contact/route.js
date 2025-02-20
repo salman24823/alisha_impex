@@ -7,22 +7,22 @@ export async function POST(req) {
   await dbConnection();
 
   try {
-    const { name, phone, email, message } = await req.json(); // Extract form data
+    const { name, company, phone, email, subject, message } = await req.json(); // Extract form data
 
     // Validate input data
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !company || !subject) {
       return NextResponse.json({
         status: 400,
-        error: "Name, email, and message are required fields.",
+        error: "Name, company, email, subject, and message are required fields.",
       });
     }
 
     // Save to MongoDB
-    const newContact = new ContactFormModel({ name, phone, email, message });
+    const newContact = new ContactFormModel({ name, company, phone, email, subject, message });
     await newContact.save();
 
     // Send email to admin
-    await sendEmailToAdmin(name, phone, email, message);
+    await sendEmailToAdmin(name, company, phone, email, subject, message);
 
     return NextResponse.json({
       status: 200,
@@ -39,27 +39,26 @@ export async function POST(req) {
 }
 
 // Function to send email to admin
-// Function to send email to multiple admins
-async function sendEmailToAdmin(name, phone, email, message) {
+async function sendEmailToAdmin(name, company, phone, email, subject, message) {
   try {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
-      port: 587, // Port 587 (STARTTLS)
-      secure: false, // Must be false for TLS
+      port: 587,
+      secure: false,
       auth: {
-        user: process.env.ADMIN_EMAIL, // Your Gmail
-        pass: process.env.EMAIL_PASS, // Your App Password (not normal password)
+        user: process.env.ADMIN_EMAIL,
+        pass: process.env.EMAIL_PASS,
       },
       tls: {
-        rejectUnauthorized: false, // Ignore SSL issues
+        rejectUnauthorized: false,
       },
-      logger: true, // Log SMTP communication
-      debug: true, // Enable debugging
+      logger: true,
+      debug: true,
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER.split(",")[0], // Send from the first email
-      to: process.env.EMAIL_USER.split(","), // Send to all emails in the env
+      from: process.env.EMAIL_USER.split(",")[0],
+      to: process.env.EMAIL_USER.split(","),
       subject: "New Contact Form Submission",
       html: `
       <html>
@@ -69,8 +68,10 @@ async function sendEmailToAdmin(name, phone, email, message) {
             
             <div style="margin-bottom: 20px;">
               <p style="font-size: 16px; margin: 5px 0;"><strong>Name:</strong> ${name}</p>
+              <p style="font-size: 16px; margin: 5px 0;"><strong>Company:</strong> ${company}</p>
               <p style="font-size: 16px; margin: 5px 0;"><strong>Phone:</strong> ${phone}</p>
               <p style="font-size: 16px; margin: 5px 0;"><strong>Email:</strong> ${email}</p>
+              <p style="font-size: 16px; margin: 5px 0;"><strong>Subject:</strong> ${subject}</p>
             </div>
   
             <div style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
