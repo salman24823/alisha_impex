@@ -11,6 +11,7 @@ import {
 import { SlMenu } from "react-icons/sl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function SideDrawer() {
   const pathname = usePathname();
@@ -58,7 +59,7 @@ export default function SideDrawer() {
 
   return (
     <>
-      <div className="flex min-[770px]:hidden flex-wrap gap-3">
+      <div className="flex min-[770px]:hidden flex-wrap gap-3 ">
         <Button
           className="p-0 bg-transparent min-w-fit rounded-full transition-colors duration-200"
           onPress={() => handleOpen("left")}
@@ -70,16 +71,16 @@ export default function SideDrawer() {
         isOpen={isOpen}
         placement={placement}
         onOpenChange={onOpenChange}
-        className="transition-all duration-300"
+        className="transition-all duration-300  "
       >
-        <DrawerContent className="bg-white p-6 w-72 shadow-lg">
+        <DrawerContent className="bg-white p-6  shadow-lg w-full">
           {(onClose) => (
             <>
-              <DrawerBody>
-                <div className="flex flex-col items-start space-y-4">
+              <DrawerBody className="flex items-center justify-center">
+                <div className="flex flex-col items-start justify-center space-y-2 ">
                   <Link
                     href="/"
-                    className="text-gray-700 hover:text-[#32673B] transition-colors duration-200 text-lg font-medium"
+                    className=" w-full text-center font-bold text-[1.5rem]"
                   >
                     Home
                   </Link>
@@ -88,24 +89,33 @@ export default function SideDrawer() {
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
                       className={`${
-                        pathname === `#${item.id}` ? "text-[#32673B]" : "text-gray-700"
-                      } hover:text-[#32673B] transition-colors duration-200 text-lg font-medium`}
+                        pathname === `#${item.id}` ? "text-[#32673B]" : ""
+                      }  w-full text-center font-bold text-[1.5rem]`}
                     >
                       {item.label}
                     </button>
                   ))}
                   <div className="w-full mt-4">
-                    <h3 className="text-gray-800 font-semibold mb-4 w-full">Related Products</h3>
+                    <h3 className=" w-full text-center font-bold text-[1.5rem]">Related Products</h3>
                     {relatedProducts.map((product) => (
                       <Link
                         key={product.name}
                         href={product.link || "/"}
-                        className="block text-gray-700 hover:text-[#32673B] transition-colors duration-200 text-lg font-medium mb-2"
+                        className=" flex flex-col  w-full text-center font-bold text-[1.2rem]"
                       >
                         {product.name}
                       </Link>
                     ))}
                   </div>
+                  <div className="flex justify-center w-full">
+                    <Link href={"https://api.whatsapp.com/send?phone=923216678600&text&type=phone_number&app_absent=0"} target="blank"><button
+                      className="web_btn"
+                      >
+                    <span className="z-10 relative text-[#32673B] flex gap-4">Contact us<FaWhatsapp className=" h-6 w-6"/></span>
+                  </button>
+                  </Link>
+                   </div>
+                  
                 </div>
               </DrawerBody>
             </>

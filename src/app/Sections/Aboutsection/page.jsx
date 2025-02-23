@@ -28,7 +28,7 @@ const Aboutsection = () => {
   return (
     <div
       id="about"
-      className="abt sections overflow-hidden p-[5%] max-[770px]:text-center w-full min-h-[110vh] bg-[url(./../../public/about.png)] bg-cover bg-no-repeat  grid grid-cols-1 md:grid-cols-2  md:gap-32"
+      className="abt sections gap-10 overflow-hidden p-[5%] max-[770px]:text-center w-full min-h-[110vh] bg-[url(./../../public/about.png)] bg-cover bg-no-repeat  grid grid-cols-1 md:grid-cols-2  md:gap-32"
       data-aos="fade-up"
     >
       <div className="flex flex-col items-center gap-5 md:gap-4 md:col-span-2" data-aos="fade-right">
@@ -52,12 +52,12 @@ const Aboutsection = () => {
 
       <div className="flex flex-col items-center gap-3 md:col-span-1"  data-aos="fade-right" data-aos-delay="400">
         <h2 className="sub_heading">Our Vision</h2>
-        <p className="w-[70%]  ">
+        <p className="md:w-[70%]  ">
         We aim to revolutionize the dye and chemicals industry by providing high-quality, sustainable dyes to factories. As importers, we focus on using innovative technology and environmentally responsible methods to ensure our products support creativity and sustainability. Our goal is to transform how companies acquire and utilize dyes, driving the industry toward a future where every color represents limitless potential and responsible practices.  </p>
       </div>
       <div className="flex flex-col items-center gap-3 md:col-span-1" data-aos="fade-left" data-aos-delay="400">
       <h2 className="sub_heading">Our Mission</h2>
-        <p className="w-[70%] ">Our mission is to become a leading supplier of high-quality imported dyes to factories, offering a diverse range of products tailored to meet specific industrial needs. We are dedicated to providing reliable service with prompt delivery and expert assistance. By maintaining a strong commitment to quality and sustainability, we ensure that our dyes meet the highest standards, contributing to a more vibrant and eco-conscious future. Through our work, we help factories bring their production processes to life with the perfect dye solutions.</p>
+        <p className="md:w-[70%] ">Our mission is to become a leading supplier of high-quality imported dyes to factories, offering a diverse range of products tailored to meet specific industrial needs. We are dedicated to providing reliable service with prompt delivery and expert assistance. By maintaining a strong commitment to quality and sustainability, we ensure that our dyes meet the highest standards, contributing to a more vibrant and eco-conscious future. Through our work, we help factories bring their production processes to life with the perfect dye solutions.</p>
       </div>
     </div>
   );
