@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// Define Schema
+// Define Schema 
 const FormData = new mongoose.Schema(
   {
     name: { type: String, required: true },
@@ -15,5 +15,6 @@ const FormData = new mongoose.Schema(
 
 // Prevent OverwriteModelError
 const ContactFormModel = mongoose.models.ContactForm || mongoose.model("ContactForm", FormData);
+
 
 export default ContactFormModel;
