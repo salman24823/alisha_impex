@@ -7,6 +7,7 @@ import React from "react";
 import LOGO from "@/../../public/Logo.png";
 import Image from "next/image";
 import SideDrawer from "./Drawer";
+import Productsection from "@/app/Sections/Productssection/page";
 
 const Header = () => {
   const pathname = usePathname();
@@ -15,8 +16,8 @@ const Header = () => {
   const navItems = [
     { id: "services", label: "Services" },
     { id: "about", label: "About us" },
-    { id: "products", label: "Products" },
-    { id: "contact", label: "Contact us" },
+    // { id: "products", label: "Products" },
+    // { id: "contact", label: "Contact us" },
     // { id: "blogs", label: "Blogs" },
   ];
 
@@ -48,9 +49,9 @@ const Header = () => {
             <Image src={LOGO} className="!w-64" alt="Logo" />
           </div>
 
-          <div className="navi max-[770px]:hidden flex gap-5 font-bold">
+          <div className="navi max-[770px]:hidden flex items-center gap-5 font-bold">
             <Link 
-              className="hover:underline underline-offset-8 hover:text-[#32673B]" 
+              className="fade_right hover:text-[#32673B]" 
               href={"/"}>
                 Home
             </Link>
@@ -59,11 +60,24 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="hover:underline underline-offset-8 hover:text-[#32673B]"
+                className="fade_right hover:text-[#32673B]"
               >
                 {item.label}
               </button>
             ))}
+            <button 
+              className="product_dropdown relative fade_right " 
+              >
+                Products
+                <div className="absolute flex flex-col w-[200px] top-10 bg-white">
+                  <Link className="drop_items p-4" href={"/"}>Reactive Dyes</Link>
+                  <Link className="drop_items p-4" href={"/"}>Disperse Dyes</Link>
+                  <Link className="drop_items p-4" href={"/"}>Acrylic Dyes</Link>
+                  <Link className="drop_items p-4" href={"/"}>Direct Dyes</Link>
+                  <Link className="drop_items p-4" href={"/"}>Sulphur Dyes</Link>
+                  <Link className="drop_items p-4" href={"/"}>HPMC</Link>
+                </div>
+            </button>
           </div>
 
           <div className="md:block hidden gap-0 items-center">

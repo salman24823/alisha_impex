@@ -85,6 +85,9 @@ html{
 .slider_cont{
   background-color: #32673b9d;
 }
+.pr-btn{
+  @apply bg-transparent text-white card_btn self-center py-2 px-6 text-[1.2rem] rounded-xl border-white border-2 hover:bg-white hover:text-[#32673B]
+}
 /*///////////////////// WEB BUTTON /////////////////////////*/
 
 .web_btn{
@@ -99,7 +102,7 @@ html{
   relative 
   overflow-hidden
 }
-.web{}
+
 .web_btn::before{
   content: "";
   position: absolute;
@@ -227,11 +230,24 @@ html{
     width: 100%;  /* Full width on hover/focus */
     transform: scaleX(1);  /* Full horizontal scale */
 }
-
+.product_dropdown{
+  transition: all 1s;
+}
+.product_dropdown:focus .drop_items{
+  display: block;
+}
+.drop_items{
+  transition: all .5s;
+  display: none;
+}
+.drop_items:hover{
+  background-color: var(--btn-color);
+  color: white;
+}
 /* ///////////// service section //////////// */
 .service_card{
   box-shadow: 1px 1px 3px silver;
-  transition: all 1s;
+  transition: all .5s;
   background-color: white;
 }
 .service_card:hover{
@@ -241,7 +257,7 @@ html{
   color: white;
   transform: translateY(-10px);
 }
-.service_card:hover span{
+.service_card:hovebg-transparent text-white card_btn self-center py-2 px-6 text-[1.2rem] rounded-xl border-white border-2 hover:bg-white hover:text-[#32673B]r span{
   color: white;
 }
 .service_card:hover p{

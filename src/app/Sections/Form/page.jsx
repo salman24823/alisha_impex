@@ -5,6 +5,7 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import { toast } from "react-toastify";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Button } from "@heroui/react";
 
 const Form = () => {
   useEffect(() => {
@@ -174,7 +175,7 @@ const Form = () => {
               data-aos-delay="700"
             ></textarea>
 
-            <button
+            <Button
               className="w-full text-white rounded-[5px] py-2 font-bold greenback"
               type="submit"
               disabled={isLoading}
@@ -182,7 +183,7 @@ const Form = () => {
               data-aos-delay="800"
             >
               {isLoading ? "Submitting..." : "Submit"}
-            </button>
+            </Button>
           </form>
         </div>
       </div>

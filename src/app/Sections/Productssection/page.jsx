@@ -1,3 +1,4 @@
+import { Button } from "@heroui/react";
 import Link from "next/link";
 import React from "react";
 import { IoIosArrowDropright } from "react-icons/io";
@@ -18,9 +19,10 @@ const Productsection = () => {
               <IoIosArrowDropright className="size-20" />
               <Link
                 href={"/Products"}
-                className="card_btn self-center py-2 px-6 text-[1.2rem] rounded-xl border-white border-2 hover:bg-white hover:text-[#32673B]"
               >
+                <Button className="pr-btn">
                 Explore more
+                </Button>
               </Link>
               <p className="text-center">
                 It's commonly used in textile industries for dying purpose.
@@ -28,16 +30,17 @@ const Productsection = () => {
             </div>
           </div>
         </div>
-        <div className="product_card card1 h-[430px] w-[19rem] bg-[url(./../../public/arcylic.png)] bg-cover bg-no-repeat rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+        <div className="product_card card1 h-[430px] w-[19rem] bg-[url(./../../public/acrylic.png)] bg-cover bg-no-repeat rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
           <div className="card_content w-[100%] h-[100%] flex flex-col p-3 card_back text-white font-bold justify-between relative top-[88%]">
             <span className="text-2xl">Acrylic dyes</span>
             <div className="card_icon flex flex-col items-center p-4 gap-4 ">
               <IoIosArrowDropright className="size-20" />
               <Link
                 href={"/Products/AcrylicDyes"}
-                className="card_btn self-center py-2 px-6 text-[1.2rem] rounded-xl border-white border-2 hover:bg-white hover:text-[#32673B]"
               >
+                <Button className="pr-btn">
                 Explore more
+                </Button>
               </Link>
               <p className="text-center">
                 Specially designed to colour synthetic fiber like acrylic and nylon
@@ -52,9 +55,10 @@ const Productsection = () => {
               <IoIosArrowDropright className="size-20" />
               <Link
                 href={"/Products/SulphurDyes"}
-                className="card_btn self-center py-2 px-6 text-[1.2rem] rounded-xl border-white border-2 hover:bg-white hover:text-[#32673B]"
               >
+                <Button className="pr-btn">
                 Explore more
+                </Button>
               </Link>
               <p className="text-center">
                 Commonly used for cotton and other cellulose fibers.
@@ -69,9 +73,10 @@ const Productsection = () => {
               <IoIosArrowDropright className="size-20" />
               <Link
                 href={"/Products/DisperseDyes"}
-                className="card_btn self-center py-2 px-6 text-[1.2rem] rounded-xl border-white border-2 hover:bg-white hover:text-[#32673B]"
               >
+                <Button className="pr-btn">
                 Explore more
+                </Button>
               </Link>
               <p className="text-center">
                 Primary used for coloring synthetic fiber such as polyester and nylon.
@@ -86,9 +91,11 @@ const Productsection = () => {
               <IoIosArrowDropright className="size-20" />
               <Link
                 href={"/Products/HPMC"}
-                className="card_btn self-center py-2 px-6 text-[1.2rem] rounded-xl border-white border-2 hover:bg-white hover:text-[#32673B]"
+                
               >
+                <Button className="pr-btn">
                 Explore more
+                </Button>
               </Link>
               <p className="text-center">
                 Widely used as a thickening, binding, and stabilizing agent in industries
@@ -103,9 +110,10 @@ const Productsection = () => {
               <IoIosArrowDropright className="size-20" />
               <Link
                 href={"/Products/DirectDyes"}
-                className="card_btn self-center py-2 px-6 text-[1.2rem] rounded-xl border-white border-2 hover:bg-white hover:text-[#32673B]"
               >
+                <Button className="pr-btn">
                 Explore more
+                </Button>
               </Link>
               <p className="text-center">
                Water soluble colorants that want directly to fiber or primary cotton.

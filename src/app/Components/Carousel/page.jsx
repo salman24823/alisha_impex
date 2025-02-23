@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import REACTIVE from "@/../../public/product-reactive.png";
 import DISPERSE from "@/../../public/product-disperse.png";
-import ACRYLIC from "@/../../public/product-arcylic.png";
+import ACRYLIC from "@/../../public/arcylic-product.png";
 import SULPHUR from "@/../../public/product-sulphur.png";
 import DIRECT from "@/../../public/product-direct.png";
 import HPMC from "@/../../public/product_hpmc.png";
