@@ -73,14 +73,14 @@ export default function SideDrawer() {
         onOpenChange={onOpenChange}
         className="transition-all duration-300  "
       >
-        <DrawerContent className="bg-white p-6  shadow-lg w-full">
+        <DrawerContent className="bg-white p-[10%]  shadow-lg w-full">
           {(onClose) => (
             <>
-              <DrawerBody className="flex items-center justify-center">
-                <div className="flex flex-col items-start justify-center space-y-2 ">
+              <DrawerBody className="flex">
+                <div className="flex flex-col items-start justify-center space-y-2">
                   <Link
                     href="/"
-                    className=" w-full text-center font-bold text-[1.5rem]"
+                    className="fade_right w-full  font-bold text-[1.8rem]"
                   >
                     Home
                   </Link>
@@ -89,25 +89,25 @@ export default function SideDrawer() {
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
                       className={`${
-                        pathname === `#${item.id}` ? "text-[#32673B]" : ""
-                      }  w-full text-center font-bold text-[1.5rem]`}
+                        pathname === `#${item.id}` ? "fade_right" : ""
+                      }   font-bold text-[1.8rem]`}
                     >
                       {item.label}
                     </button>
                   ))}
-                  <div className="w-full mt-4">
-                    <h3 className=" w-full text-center font-bold text-[1.5rem]">Related Products</h3>
+                  <div className="w-full mt-4 flex flex-col gap-2">
+                    <h3 className="fade_right w-full  font-bold text-[1.8rem]">Related Products</h3>
                     {relatedProducts.map((product) => (
                       <Link
                         key={product.name}
                         href={product.link || "/"}
-                        className=" flex flex-col  w-full text-center font-bold text-[1.2rem]"
+                        className=" flex flex-col  w-full font-bold  text-[1.2rem]"
                       >
                         {product.name}
                       </Link>
                     ))}
                   </div>
-                  <div className="flex justify-center w-full">
+                  <div className="flex  w-full">
                     <Link href={"https://api.whatsapp.com/send?phone=923216678600&text&type=phone_number&app_absent=0"} target="blank"><button
                       className="web_btn"
                       >
