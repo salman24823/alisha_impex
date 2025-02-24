@@ -44,7 +44,7 @@ const Herosection = () => {
           </p>
           <div className="flex w-full justify-center md:justify-start mt-3">
             <button
-              onClick={() => scrollToSection("products")}
+              onClick={() => scrollToSection("about")}
               className="web_btn"
               data-aos="zoom-in"
               data-aos-delay="400"
