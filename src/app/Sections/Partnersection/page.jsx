@@ -11,7 +11,7 @@ const Partnersection = () => {
   }, []);
 
   return (
-    <div className="w-full sections p-[5%]" data-aos="fade-up flex flex-col justify-center">
+    <main  className="Main_cnt w-full sections p-[5%]" data-aos="fade-up flex flex-col justify-center">
       <h2 className="text-3xl md:text-5xl text-center  leading-tight font-bold text-gray-800">
         Our Partners
       </h2>
@@ -52,7 +52,7 @@ const Partnersection = () => {
           /></Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

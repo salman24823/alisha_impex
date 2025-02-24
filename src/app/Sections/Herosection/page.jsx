@@ -26,13 +26,13 @@ const Herosection = () => {
   
 
   return (
-    <div
+    <main
       id="home"
       className="sec w-full h-[110vh] 
       bg-no-repeat bg-cover relative"
       data-aos="fade-in"
     >
-      <div className="bds w-full h-[110vh] grid grid-cols-1 md:grid-cols-2 p-[5%]">
+      <div className="Main_cnt bds w-full h-[110vh] grid grid-cols-1 md:grid-cols-2 p-[5%]">
         <div className="alishaimpex_cont flex gap-8 flex-col justify-center items-center md:items-start md:pl-[2%]" data-aos="fade-right">
           <h1 className="main_heading md:!text-6xl !text-3xl text-center md:text-left" data-aos="fade-up">
            Global excellence in dyes and chemicals.
@@ -54,7 +54,7 @@ const Herosection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

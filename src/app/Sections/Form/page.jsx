@@ -57,7 +57,7 @@ const Form = () => {
   }
 
   return (
-    <div id="contact" className="!overflow-hidden sections w-full p-[5%] greenback">
+    <main id="contact" className="Main_cnt !overflow-hidden sections w-full p-[5%] greenback">
       <div className="contact_section grid grid-rows-1 grid-cols-1 md:grid-cols-[1.5fr,1fr] gap-8">
         
         <div className="flex flex-col gap-12" data-aos="fade-right">
@@ -187,7 +187,7 @@ const Form = () => {
           </form>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

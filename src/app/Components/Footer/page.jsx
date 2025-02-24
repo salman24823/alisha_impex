@@ -48,7 +48,7 @@ const Footer = () => {
 
   return (
     <div className="">
-      <footer className="flex flex-col gap-6 background font-bold p-[5%] relative">
+      <footer className="footer flex flex-col gap-6 background font-bold p-[5%] relative">
         
         <div className="ft_cont grid grid-cols-1 md:grid-cols-2 lg:grid-cols-9 py-[3%] gap-6">
 

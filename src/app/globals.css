@@ -244,10 +244,10 @@ html{
   background-color: var(--btn-color);
   color: white;
 }
-/* ///////////// service section //////////// */
+ 
 .service_card{
   box-shadow: 1px 1px 3px silver;
-  transition: all .5s;
+  transition: all 1s;
   background-color: white;
 }
 .service_card:hover{
@@ -257,7 +257,7 @@ html{
   color: white;
   transform: translateY(-10px);
 }
-.service_card:hovebg-transparent text-white card_btn self-center py-2 px-6 text-[1.2rem] rounded-xl border-white border-2 hover:bg-white hover:text-[#32673B]r span{
+.service_card:hover span{
   color: white;
 }
 .service_card:hover p{
@@ -356,21 +356,71 @@ footer{
   color: var(--btn-color);
 }
 
-/* /////////grayscale//////// */
-/* 
-.company_icons img{
-  opacity: calc(20%);
-  transition: all 0.5s;
+
+
+
+@media (min-width: 640px){
+
 }
-.company_icons img:hover {
-  opacity: 100%;
+@media (min-width: 768px){
 
-} */
+}
+@media (min-width: 1024px){
 
+}
+@media (min-width: 1280px){
 
+}
+@media (min-width: 1536px){
+ body{
+  @apply flex flex-col items-center
 
+ }
 
-
-
-
-
+}
+@media (min-width: 1800px){
+  .Main_cnt{
+    @apply px-[12%]
+  }
+  .header{
+    @apply px-[12%]
+  }
+  .footer{
+    @apply px-[12%]
+  }
+  .main_heading{
+    color: var(--heading-color);
+    @apply leading-tight font-bold text-8xl 
+  }
+  .sub_heading{
+    color: var(--heading-color);
+    @apply text-5xl max-[770px]:text-5xl leading-tight font-bold
+  }
+  .para{
+    line-height: 1.9rem;
+    @apply text-[1.2rem]
+  }
+ }
+ @media (min-width: 2200px){
+  .Main_cnt{
+    @apply px-[18%]
+  }
+  .header{
+    @apply px-[18%]
+  }
+  .footer{
+    @apply px-[18%]
+  }
+  .para{
+    line-height: 2.2rem;
+    @apply text-[1.5rem]
+  }
+  .main_heading{
+    color: var(--heading-color);
+    @apply leading-tight font-bold text-9xl 
+  }
+  .sub_heading{
+    color: var(--heading-color);
+    @apply text-5xl max-[770px]:text-7xl leading-tight font-bold
+  }
+ }

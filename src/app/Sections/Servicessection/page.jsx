@@ -13,7 +13,7 @@ const Servicessection = () => {
   }, []);
 
   return (
-    <div id='services' className='sections p-[5%] w-full flex flex-col items-center gap-7'>
+    <main id='services' className='Main_cnt sections p-[5%] w-full flex flex-col items-center gap-7'>
       <h2 className='sub_heading flex gap-2' data-aos="fade-up">Our Services</h2>
       <span className='text-green-900 text-lg font-bold max-[770px]:text-center' data-aos="fade-up" data-aos-delay="200">
         Supply of high quality dyes and chemicals 
@@ -48,7 +48,7 @@ const Servicessection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

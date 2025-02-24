@@ -5,7 +5,7 @@ import { IoIosArrowDropright } from "react-icons/io";
 
 const Productsection = () => {
   return (
-    <div id="products" className="sections p-[5%] flex items-center flex-col gap-6">
+    <main id="products" className="Main_cnt sections p-[5%] flex items-center flex-col gap-6">
       <h2 className="sub_heading" data-aos="fade-up">Our Products</h2>
       <span className="text-green-900 max-[770px]:text-center text-lg font-bold" data-aos="fade-up" data-aos-delay="100">
         Supply of high quality dyes and chemicals
@@ -122,7 +122,7 @@ const Productsection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
