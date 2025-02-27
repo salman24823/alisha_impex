@@ -81,13 +81,23 @@ export default function SideDrawer() {
                   <Link
                     href="/"
                     className="fade_right w-full  font-bold text-[1.8rem]"
+                    onClick={() => {
+                      onClose(); // Close the drawer
+                    }}
                   >
                     Home
                   </Link>
                   {navItems.map((item) => (
                     <button
                       key={item.id}
-                      onClick={() => scrollToSection(item.id)}
+
+                      
+                      onClick={() => {
+                        scrollToSection(item.id); // Scroll to section
+                        onClose(); // Close the drawer after clicking the item
+                      }}
+
+
                       className={`${
                         pathname === `#${item.id}` ? "fade_right" : ""
                       }   font-bold text-[1.8rem]`}
@@ -102,6 +112,10 @@ export default function SideDrawer() {
                         key={product.name}
                         href={product.link || "/"}
                         className=" flex flex-col  w-full font-bold  text-[1.2rem]"
+                        onClick={() => {
+                          onClose(); // Close the drawer
+                        }}
+
                       >
                         {product.name}
                       </Link>
