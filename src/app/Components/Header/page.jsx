@@ -70,12 +70,12 @@ const Header = () => {
               >
                 Products
                 <div className="absolute flex flex-col w-[200px] top-10 bg-white">
-                  <Link className="drop_items p-4" href={"/"}>Reactive Dyes</Link>
-                  <Link className="drop_items p-4" href={"/"}>Disperse Dyes</Link>
-                  <Link className="drop_items p-4" href={"/"}>Acrylic Dyes</Link>
-                  <Link className="drop_items p-4" href={"/"}>Direct Dyes</Link>
-                  <Link className="drop_items p-4" href={"/"}>Sulphur Dyes</Link>
-                  <Link className="drop_items p-4" href={"/"}>HPMC</Link>
+                  <Link className="drop_items p-4" href={"/Products"}>Reactive Dyes</Link>
+                  <Link className="drop_items p-4" href={"/Products/DisperseDyes"}>Disperse Dyes</Link>
+                  <Link className="drop_items p-4" href={"/Products/AcrylicDyes"}>Acrylic Dyes</Link>
+                  <Link className="drop_items p-4" href={"/Products/DirectDyes"}>Direct Dyes</Link>
+                  <Link className="drop_items p-4" href={"/Products/SulphurDyes"}>Sulphur Dyes</Link>
+                  <Link className="drop_items p-4" href={"/Products/HPMC"}>HPMC</Link>
                 </div>
             </button>
           </div>
