@@ -15,10 +15,6 @@ export default function Home() {
   const router = useRouter();
 
 
-
-
-  
-
   const togglePasswordVisibility = () => {
     setPasswordVisible((prev) => !prev);
   };
@@ -109,7 +105,7 @@ export default function Home() {
 
         <Button
           ariaLabel="Login"
-          className="w-full max-md:p-5 px-6 py-3 font-semibold max-md:text-sm max-md:font-normal text-medium bg-green-600 hover:bg-green-700 active:bg-green-600 text-white px-6 rounded-lg transition duration-300 ease-in-out"
+          className="w-full max-md:p-5 py-3 font-semibold max-md:text-sm max-md:font-normal text-medium bg-green-600 hover:bg-green-700 active:bg-green-600 text-white px-6 rounded-lg transition duration-300 ease-in-out"
           onClick={handleCredentialsLogin}
         >
           {loading ? <Spinner /> : "Login As Admin"}
@@ -125,6 +121,7 @@ export default function Home() {
         </a>{" "}
         your Developers
       </p>
+      
     </div>
   );
 }

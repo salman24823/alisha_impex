@@ -46,6 +46,7 @@ const Form = () => {
         setEmail("");
         setSubject("");
         setMessage("");
+        
       } else {
         toast.error("Failed to submit form");
       }

@@ -17,7 +17,9 @@ import { toast } from "react-toastify";
 import { useSession } from "next-auth/react";
 
 export default function Admin() {
+  
   const { data: session, status } = useSession();
+
   const [products, setProducts] = useState({ data: [] });
   const [isLoading, setIsLoading] = useState(true); // Loading state for data fetching
 
