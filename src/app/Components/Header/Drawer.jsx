@@ -94,8 +94,9 @@ export default function SideDrawer() {
                       
                       onClick={() => {
                         scrollToSection(item.id); // Scroll to section
-                        onClose(); // Close the drawer after clicking the item
+                        onClose(); // Close the drawer after clicking 
                       }}
+
 
 
                       className={`${
