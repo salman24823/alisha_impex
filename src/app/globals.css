@@ -404,6 +404,9 @@ footer{
     line-height: 1.9rem;
     @apply text-[1.2rem]
   }
+  .parent_ourvision{
+    box-shadow: 1px 1px 3px silver;
+  }
  }
  @media (min-width: 2200px){
   .Main_cnt{
