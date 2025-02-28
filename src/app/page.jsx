@@ -2,6 +2,7 @@ import Aboutsection from "./Sections/Aboutsection/page";
 import Form from "./Sections/Form/page";
 import Herosection from "./Sections/Herosection/page";
 import Locationsection from "./Sections/Locationsection/page";
+import Ourvision from "./Sections/Ourvision/page";
 import Partnersection from "./Sections/Partnersection/page";
 import Productsection from "./Sections/Productssection/page";
 import Servicessection from "./Sections/Servicessection/page";
@@ -11,6 +12,7 @@ export default function Home() {
    <div className="">
     <Herosection />    
     <Aboutsection />
+    <Ourvision/>
     <Servicessection />
     <Productsection />
     <Partnersection />

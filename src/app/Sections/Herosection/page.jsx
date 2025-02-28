@@ -49,7 +49,7 @@ const Herosection = () => {
               data-aos="zoom-in"
               data-aos-delay="400"
             >
-              <span>Our Vision</span>
+              <span>About us</span>
             </button>
           </div>
         </div>

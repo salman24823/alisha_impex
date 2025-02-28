@@ -21,7 +21,7 @@ const Footer = () => {
   ];
 
   const addresses = [
-    { city: "Address", address: "2nd floor,HK Plaza,Makkah Commercial, 208 Chak Road, Adjecent, Canal Road, Eden Valley, Faisalabad, Punjab" },
+    { city: "Address", address: "HK Plaza,Makkah Commercial, 208 Chak Road, Adjecent, Canal Road, Eden Valley, Faisalabad, Punjab" },
     // { city: "Lahore", address: "123 Main St, Suite 200\nLahore, Punjab 54000 Pakistan" },
   ];
 
@@ -95,18 +95,18 @@ const Footer = () => {
               <span className="text-[1.5rem]">Contact</span>
               <ul className="list-none px-2">
                 <li className="text-green-800 font-light text-lg hover:text-gray-200 cursor-pointer transition-all">
-                  +92 301 9023898
+                  +92 321 6678600
                 </li>
                 <li className="text-green-800 font-light text-lg hover:text-gray-200 cursor-pointer transition-all">
-                  +92 321 6678600
+                  +92 301 9023898
                 </li>
               </ul>
             </div>
             <div className="child">
               <span className="text-[1.5rem]">Email</span>
               <Link href="mailto:support@alishaimpex.com" className="font-light flex flex-col gap-3">
-                <span className="text-green-800 hover:text-white">managealishaimpex@gmail.com</span>
                 <span className="text-green-800 hover:text-white">ceoalishaimpex@gmail.com</span>
+                <span className="text-green-800 hover:text-white">managealishaimpex@gmail.com</span>
               </Link>
             </div>
           </div>

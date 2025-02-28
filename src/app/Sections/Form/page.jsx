@@ -71,7 +71,7 @@ const Form = () => {
             reach out to us anytime.
           </p>
           <div className="ques_list text-white" data-aos="fade-up" data-aos-delay="400">
-            <ul className="font-bold flex flex-col gap-4">
+            {/* <ul className="font-bold flex flex-col gap-4">
               <li className="flex items-center gap-2">
                 <FaRegCheckCircle />
                 How can I start with Alisha Impex?
@@ -88,15 +88,7 @@ const Form = () => {
                 <FaRegCheckCircle />
                 What kind of dyes we provide?
               </li>
-              {/* <li className="flex items-center gap-2">
-                <FaRegCheckCircle />
-                How do we deal, with sales tax and without sales tax?
-              </li> */}
-              {/* <li className="flex items-center gap-2">
-                <FaRegCheckCircle />
-                We provide x-stock and all dyes in EFS facility?
-              </li> */}
-            </ul>
+            </ul> */}
           </div>
         </div>
 

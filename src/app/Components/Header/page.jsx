@@ -42,7 +42,7 @@ const Header = () => {
 
   return (
     <main>
-      <header className="header flex items-center w-full px-[5%] max-[770px]:px-4 py-3  z-10 fixed bg-white text_color">
+      <header className="header flex items-center w-full px-[5%] max-[770px]:px-4 py-3  z-50 fixed bg-white text_color">
         <nav className="flex justify-between items-center w-full cursor-pointer">
           <div className="logo max-[770px]:w-full max-[770px]:!justify-between max-[770px]:flex-row-reverse flex gap-4 items-center">
             <SideDrawer />

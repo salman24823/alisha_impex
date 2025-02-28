@@ -66,6 +66,10 @@ html{
   color: var(--heading-color);
   @apply text-5xl max-[770px]:text-3xl leading-tight font-bold
 }
+.sub_white{
+  color: white;
+  @apply text-5xl max-[770px]:text-3xl leading-tight font-bold
+}
 .text_color{
   color: var(--heading-color);
 }
