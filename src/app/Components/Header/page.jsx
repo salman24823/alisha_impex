@@ -1,5 +1,6 @@
 "use client"; // Mark as client-side component
 
+import { useState } from "react";
 import { usePathname } from "next/navigation"; // Use usePathname from Next.js 14
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
@@ -11,6 +12,7 @@ import Productsection from "@/app/Sections/Productssection/page";
 
 const Header = () => {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false); // Track dropdown visibility
 
   // Define the navigation items
   const navItems = [
@@ -40,6 +42,15 @@ const Header = () => {
     }
   };
 
+  // Handle dropdown toggle and closing on link click
+  const handleDropdownToggle = () => {
+    setIsOpen(!isOpen); // Toggle dropdown visibility
+  };
+
+  const handleLinkClick = () => {
+    setIsOpen(false); // Close dropdown when a link is clicked
+  };
+
   return (
     <main>
       <header className="header flex items-center w-full px-[5%] max-[770px]:px-4 py-3  z-50 fixed bg-white text_color">
@@ -64,29 +75,36 @@ const Header = () => {
               >
                 {item.label}
               </button>
-            ))}
-            <button 
-              className="product_dropdown relative fade_right " 
+            ))} 
+
+            {/* Products Dropdown */}
+            <div className="product_dropdown relative ">
+              <button 
+                className="relative fade_right" 
+                onClick={handleDropdownToggle} // Toggle dropdown on button click
               >
                 Products
-                <div className="absolute flex flex-col w-[200px] top-10 bg-white">
-                  <Link className="drop_items p-4" href={"/Products"}>Reactive Dyes</Link>
-                  <Link className="drop_items p-4" href={"/Products/DisperseDyes"}>Disperse Dyes</Link>
-                  <Link className="drop_items p-4" href={"/Products/AcrylicDyes"}>Acrylic Dyes</Link>
-                  <Link className="drop_items p-4" href={"/Products/DirectDyes"}>Direct Dyes</Link>
-                  <Link className="drop_items p-4" href={"/Products/SulphurDyes"}>Sulphur Dyes</Link>
-                  <Link className="drop_items p-4" href={"/Products/HPMC"}>HPMC</Link>
-                </div>
-            </button>
+              </button>
+              <div 
+                className={`drop absolute flex flex-col w-[200px] top-10 bg-white ${isOpen ? 'opacity-100 visibility-visible' : 'opacity-0 visibility-hidden'}`}
+              >
+                <Link className="drop_items w-full p-4" href="/Products" onClick={handleLinkClick}>Reactive Dyes</Link>
+                <Link className="drop_items w-full p-4" href="/Products/DisperseDyes" onClick={handleLinkClick}>Disperse Dyes</Link>
+                <Link className="drop_items w-full p-4" href="/Products/AcrylicDyes" onClick={handleLinkClick}>Acrylic Dyes</Link>
+                <Link className="drop_items w-full p-4" href="/Products/DirectDyes" onClick={handleLinkClick}>Direct Dyes</Link>
+                <Link className="drop_items w-full p-4" href="/Products/SulphurDyes" onClick={handleLinkClick}>Sulphur Dyes</Link>
+                <Link className="drop_items w-full p-4" href="/Products/HPMC" onClick={handleLinkClick}>HPMC</Link>
+              </div>
+            </div>
           </div>
 
           <div className="md:block hidden gap-0 items-center">
-            <Link href={"https://api.whatsapp.com/send?phone=923216678600&text&type=phone_number&app_absent=0"} target="blank"><button
-              // onClick={() => scrollToSection("contact")}
-              className="web_btn relative max-[770px]:px-1 max-[770px]:text-sm overflow-hidden"
-            >
-              <span className="z-10 relative text-[#32673B] flex gap-4">Contact us<FaWhatsapp className=" h-6 w-6"/></span>
-            </button>
+            <Link href="https://api.whatsapp.com/send?phone=923216678600&text&type=phone_number&app_absent=0" target="blank">
+              <button className="web_btn relative max-[770px]:px-1 max-[770px]:text-sm overflow-hidden">
+                <span className="z-10 relative text-[#32673B] flex gap-4">
+                  Contact us<FaWhatsapp className=" h-6 w-6"/>
+                </span>
+              </button>
             </Link>
           </div>
           

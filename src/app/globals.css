@@ -234,21 +234,41 @@ html{
     width: 100%;  /* Full width on hover/focus */
     transform: scaleX(1);  /* Full horizontal scale */
 }
-.product_dropdown{
-  transition: all 1s;
+/* .product_dropdown{
+  transition: all 2s;
 }
-.product_dropdown:focus .drop_items{
-  display: block;
-}
-.drop_items{
-  transition: all .5s;
+.drop{
   display: none;
 }
+.product_dropdown:hover .drop{
+  display: block;
+}
+
 .drop_items:hover{
   background-color: var(--btn-color);
   color: white;
 }
- 
+  */
+  .product_dropdown {
+    position: relative;
+  }
+  
+  .drop {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .product_dropdown:hover .drop {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .drop_items:hover {
+    background-color: var(--btn-color);
+    color: white;
+  }
+  
 .service_card{
   box-shadow: 1px 1px 3px silver;
   transition: all 1s;
