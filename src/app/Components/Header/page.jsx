@@ -78,7 +78,7 @@ const Header = () => {
             ))} 
 
             {/* Products Dropdown */}
-            <div className="product_dropdown relative ">
+            <div className="product_dropdown relative">
               <button 
                 className="relative fade_right" 
                 onClick={handleDropdownToggle} // Toggle dropdown on button click

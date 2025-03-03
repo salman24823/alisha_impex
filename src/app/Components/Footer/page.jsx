@@ -1,10 +1,14 @@
-"use client"
+"use client";
 
 import React from "react";
 import { BiSolidUpArrow } from "react-icons/bi";
-import { TiSocialTwitter, TiSocialInstagram, TiSocialFacebookCircular } from "react-icons/ti";
+import {
+  TiSocialTwitter,
+  TiSocialInstagram,
+  TiSocialFacebookCircular,
+} from "react-icons/ti";
 import { IoMdMail } from "react-icons/io";
-import LOGO from '@/../../public/Logo.png';
+import LOGO from "@/../../public/Logo.png";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -14,14 +18,30 @@ const Footer = () => {
 
   // Dynamic Data
   const SocialIcons = [
-    { icon: <TiSocialInstagram className="icon relative z-10" />, link: "https://www.instagram.com" },
-    { icon: <TiSocialFacebookCircular className="icon relative z-10" />, link: "https://www.facebook.com" },
-    { icon: <TiSocialTwitter className="icon relative z-10" />, link: "https://www.twitter.com" },
-    { icon: <IoMdMail className="icon relative z-10" />, link: "mailto:support@alishaimpex.com" },
+    {
+      icon: <TiSocialInstagram className="icon relative z-10" />,
+      link: "https://www.instagram.com",
+    },
+    {
+      icon: <TiSocialFacebookCircular className="icon relative z-10" />,
+      link: "https://www.facebook.com",
+    },
+    {
+      icon: <TiSocialTwitter className="icon relative z-10" />,
+      link: "https://www.twitter.com",
+    },
+    {
+      icon: <IoMdMail className="icon relative z-10" />,
+      link: "mailto:support@alishaimpex.com",
+    },
   ];
 
   const addresses = [
-    { city: "Address", address: "HK Plaza,Makkah Commercial, 208 Chak Road, Adjecent, Canal Road, Eden Valley, Faisalabad, Punjab" },
+    {
+      city: "Address",
+      address:
+        "HK Plaza,Makkah Commercial, 208 Chak Road, Adjecent, Canal Road, Eden Valley, Faisalabad, Punjab",
+    },
     // { city: "Lahore", address: "123 Main St, Suite 200\nLahore, Punjab 54000 Pakistan" },
   ];
 
@@ -49,9 +69,7 @@ const Footer = () => {
   return (
     <div className="">
       <footer className="footer flex flex-col gap-6 background font-bold p-[5%] relative">
-        
         <div className="ft_cont grid grid-cols-1 md:grid-cols-2 lg:grid-cols-9 py-[3%] gap-6">
-
           <div className="flex col-span-3 flex-col gap-4">
             <div className="logo flex gap-2 items-center">
               <Image src={LOGO} width={350} alt="Logo" />
@@ -59,16 +77,65 @@ const Footer = () => {
             <div className="sin">
               <h2 className="text-transparent text-[3rem]">since 2005.</h2>
             </div>
-            {/* <span className="mt-8">
-              2025 <span className="text-green-800 cursor-pointer">Alishaimpex.</span> All Rights reserved.
-            </span> */}
+            <div className="footer_logos flex">
+              <div className="company_icons justify-center flex gap-2 pr-[5%]">
+                <div className="flex items-center justify-center">
+                  <Link href={"http://www.runtuchem.com/"} target="blank">
+                    <img
+                      className="h-auto"
+                      src="./../../../../partners-1.png"
+                      alt="Partner 1"
+                      data-aos="fade-up"
+                    />
+                  </Link>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Link
+                    href={"http://en.jihuadyes.com/pbl/1.html"}
+                    target="blank"
+                  >
+                    <img
+                      className="h-auto"
+                      src="./../../../../partners-2.png"
+                      alt="Partner 2"
+                      data-aos="fade-up"
+                      data-aos-delay="100"
+                    />
+                  </Link>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Link href={"https://en.shanyu.com/"} target="blank">
+                    <img
+                      className="auto"
+                      src="./../../../../partners-3.png"
+                      alt="Partner 3"
+                      data-aos="fade-up"
+                      data-aos-delay="200"
+                    />
+                  </Link>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Link href={"https://www.longsheng.com/en/"} target="blank">
+                    <img
+                      className="h-auto"
+                      src="./../../../../partners-4.png"
+                      alt="Partner 4"
+                      data-aos="fade-up"
+                      data-aos-delay="300"
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="footer_card col-span-2">
             {addresses.map((address, index) => (
               <div className="child" key={index}>
                 <span className="text-[1.5rem]">{address.city}</span>
-                <p className="font-light text-base whitespace-pre-line">{address.address}</p>
+                <p className="font-light text-base whitespace-pre-line">
+                  {address.address}
+                </p>
               </div>
             ))}
             <div className="child">
@@ -104,9 +171,16 @@ const Footer = () => {
             </div>
             <div className="child">
               <span className="text-[1.5rem]">Email</span>
-              <Link href="mailto:support@alishaimpex.com" className="font-light flex flex-col gap-3">
-                <span className="text-green-800 hover:text-white">ceoalishaimpex@gmail.com</span>
-                <span className="text-green-800 hover:text-white">managealishaimpex@gmail.com</span>
+              <Link
+                href="mailto:support@alishaimpex.com"
+                className="font-light flex flex-col gap-3"
+              >
+                <span className="text-green-800 hover:text-white">
+                  ceoalishaimpex@gmail.com
+                </span>
+                <span className="text-green-800 hover:text-white">
+                  managealishaimpex@gmail.com
+                </span>
               </Link>
             </div>
           </div>
@@ -125,15 +199,15 @@ const Footer = () => {
               ))}
             </div>
           </div>
-
         </div>
 
         <hr className="w-full" />
 
         <span className="self-center">
-          2025 <span className="text-green-800 cursor-pointer">Alishaimpex.</span> All Rights reserved.
+          2025{" "}
+          <span className="text-green-800 cursor-pointer">Alishaimpex.</span>{" "}
+          All Rights reserved.
         </span>
-
       </footer>
     </div>
   );

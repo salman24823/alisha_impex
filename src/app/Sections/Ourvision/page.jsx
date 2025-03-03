@@ -3,7 +3,7 @@ import React from 'react'
 const Ourvision = () => {
   return (
     <div className='Main_cnt'>
-      <div className="parent_ourvision  grid grid-cols-1 md:grid-cols-2">
+      <div className="parent_ourvision  grid grid-cols-1 md:grid-cols-2 overflow-hidden">
       <div className="greenback flex p-[10%] flex-col  gap-3 md:col-span-1"  data-aos="fade-right" data-aos-delay="400">
         <h2 className="sub_white">Our Vision</h2>
         <p className="text-white md:w-[80%]  ">
